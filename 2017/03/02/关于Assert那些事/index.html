@@ -108,7 +108,7 @@
 <meta name="keywords" content="assets">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Assets的那些事">
-<meta property="og:url" content="http://yoursite.com/2017/03/02/关于Assert那些事/index.html">
+<meta property="og:url" content="http://devnote.info/2017/03/02/关于Assert那些事/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
 <meta property="og:description" content="好久没有作总结了，一个是太忙，当然最主要的原因还是自己太懒，最近有点空闲时间，来总结一下Android中的Assets。我们都知道res和raw文件都会被映射到R.java文件下，访问的时候可以直接通过R.id.xxx访问，但是Assets就没有那么方便了，他不会将文件映射到R.java中，但是系统提供了一个AssertManager，所以主要就用它了。">
 <meta property="og:locale" content="zh-CN">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/02/关于Assert那些事/">
+  <link rel="canonical" href="http://devnote.info/2017/03/02/关于Assert那些事/">
 
 
 
@@ -386,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/02/关于Assert那些事/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/2017/03/02/关于Assert那些事/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -433,22 +433,6 @@
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2017-03-23 15:20:12" itemprop="dateModified" datetime="2017-03-23T15:20:12+08:00">2017-03-23</time>
-              
-            
           </span>
 
           
@@ -472,17 +456,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/02/关于Assert那些事/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/02/关于Assert那些事/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -740,6 +713,17 @@
                   <a href="https://github.com/ChenLiheng" title="GitHub &rarr; https://github.com/ChenLiheng" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:191129259@qq.com" title="E-Mail &rarr; mailto:191129259@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             </div>
           
 
@@ -936,13 +920,11 @@
   
 
   
-    <script id="dsq-count-scr" src="https://devnote-info.disqus.com/count.js" async></script>
-  
 
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://yoursite.com/2017/03/02/关于Assert那些事/";
+        this.page.url = "http://devnote.info/2017/03/02/关于Assert那些事/";
         this.page.identifier = "2017/03/02/关于Assert那些事/";
         this.page.title = '关于Assets的那些事';
         };
@@ -995,7 +977,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1341,9 +1323,14 @@
             })
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
             
           }
         })

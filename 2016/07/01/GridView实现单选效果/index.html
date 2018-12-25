@@ -108,7 +108,7 @@
 <meta name="keywords" content="JavaScript Java Android 前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GridView实现单选效果">
-<meta property="og:url" content="http://yoursite.com/2016/07/01/GridView实现单选效果/index.html">
+<meta property="og:url" content="http://devnote.info/2016/07/01/GridView实现单选效果/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
 <meta property="og:description" content="前两天在做项目的时候遇到这么一个问题，就是动态的添加两列若干按钮（View、Button、TextView…），并且实现单选。当时第一就想到了RadioGroup，但在实现的时候发现RadioGroup不能分行分列显示，然后就钻进了死胡同，到网上找一些关于这个问题的解决办法，有重写RadioGroup的，有用FlowRadioGroup（GitHub上开源项目）的。但都比较麻烦（对于我这种小白来说">
 <meta property="og:locale" content="zh-CN">
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/01/GridView实现单选效果/">
+  <link rel="canonical" href="http://devnote.info/2016/07/01/GridView实现单选效果/">
 
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/01/GridView实现单选效果/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/2016/07/01/GridView实现单选效果/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -436,38 +436,11 @@
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2017-03-23 15:54:36" itemprop="dateModified" datetime="2017-03-23T15:54:36+08:00">2017-03-23</time>
-              
-            
           </span>
 
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/01/GridView实现单选效果/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/01/GridView实现单选效果/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -549,18 +522,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/" rel="next" title="Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)">
-                <i class="fa fa-chevron-left"></i> Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/12/Fragment切换 保存状态(add show hide)/" rel="prev" title="Fragment 小记">
-                Fragment 小记 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/" rel="prev" title="Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)">
+                Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -720,6 +689,17 @@
                     
                   
                   <a href="https://github.com/ChenLiheng" title="GitHub &rarr; https://github.com/ChenLiheng" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:191129259@qq.com" title="E-Mail &rarr; mailto:191129259@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
             </div>
@@ -918,13 +898,11 @@
   
 
   
-    <script id="dsq-count-scr" src="https://devnote-info.disqus.com/count.js" async></script>
-  
 
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://yoursite.com/2016/07/01/GridView实现单选效果/";
+        this.page.url = "http://devnote.info/2016/07/01/GridView实现单选效果/";
         this.page.identifier = "2016/07/01/GridView实现单选效果/";
         this.page.title = 'GridView实现单选效果';
         };
@@ -977,7 +955,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1323,9 +1301,14 @@
             })
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
             
           }
         })

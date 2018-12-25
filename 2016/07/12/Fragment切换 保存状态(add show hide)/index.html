@@ -108,7 +108,7 @@
 <meta name="keywords" content="android,fragment">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Fragment 小记">
-<meta property="og:url" content="http://yoursite.com/2016/07/12/Fragment切换 保存状态(add show hide)/index.html">
+<meta property="og:url" content="http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
 <meta property="og:description" content="关于Fragment的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于Fragment add 和 replace区别的文章了，自己没有独到的见解写再多也是显的苍白无力.">
 <meta property="og:locale" content="zh-CN">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/12/Fragment切换 保存状态(add show hide)/">
+  <link rel="canonical" href="http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/">
 
 
 
@@ -386,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/12/Fragment切换 保存状态(add show hide)/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -433,22 +433,6 @@
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2017-03-23 16:15:06" itemprop="dateModified" datetime="2017-03-23T16:15:06+08:00">2017-03-23</time>
-              
-            
           </span>
 
           
@@ -472,17 +456,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/07/12/Fragment切换 保存状态(add show hide)/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/12/Fragment切换 保存状态(add show hide)/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -564,8 +537,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/01/GridView实现单选效果/" rel="next" title="GridView实现单选效果">
-                <i class="fa fa-chevron-left"></i> GridView实现单选效果
+              <a href="/2016/07/12/Android Studio 安装使用/" rel="next" title="Android Studio 安装与配置">
+                <i class="fa fa-chevron-left"></i> Android Studio 安装与配置
               </a>
             
           </div>
@@ -574,8 +547,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/12/Android Studio 安装使用/" rel="prev" title="Android Studio 安装与配置">
-                Android Studio 安装与配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/19/自定义Drawable/" rel="prev" title="Drawable Xml笔记">
+                Drawable Xml笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -735,6 +708,17 @@
                     
                   
                   <a href="https://github.com/ChenLiheng" title="GitHub &rarr; https://github.com/ChenLiheng" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:191129259@qq.com" title="E-Mail &rarr; mailto:191129259@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
             </div>
@@ -933,13 +917,11 @@
   
 
   
-    <script id="dsq-count-scr" src="https://devnote-info.disqus.com/count.js" async></script>
-  
 
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://yoursite.com/2016/07/12/Fragment切换 保存状态(add show hide)/";
+        this.page.url = "http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/";
         this.page.identifier = "2016/07/12/Fragment切换 保存状态(add show hide)/";
         this.page.title = 'Fragment 小记';
         };
@@ -992,7 +974,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1338,9 +1320,14 @@
             })
           } else {
             
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
             
           }
         })
