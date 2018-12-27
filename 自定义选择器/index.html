@@ -104,29 +104,27 @@
 
 
 
-  <meta name="description" content="我们都知道，ios上的状态栏是可以沉浸的，保持了标题栏一样的颜色，这样就让人感觉很高大上，整个屏幕的利用率和风格得到了充分的利用和展现。而在Android中状态栏默认是黑色的(真心不好看)，且不会随着App标题栏的颜色改变，使得整个app 的风格看起来不是那么协调.Android4.4以后，api里边提供了设置状态栏透明的属性，so.我们就可以做一些文章了…二话不说了，先上几个效果图：">
-<meta name="keywords" content="android,java,状态栏透明">
+  <meta name="description" content="写在前面发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要">
+<meta name="keywords" content="选择器,自定义控件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)">
-<meta property="og:url" content="http://devnote.info/2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/index.html">
+<meta property="og:title" content="时间选择器">
+<meta property="og:url" content="http://devnote.info/自定义选择器/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
-<meta property="og:description" content="我们都知道，ios上的状态栏是可以沉浸的，保持了标题栏一样的颜色，这样就让人感觉很高大上，整个屏幕的利用率和风格得到了充分的利用和展现。而在Android中状态栏默认是黑色的(真心不好看)，且不会随着App标题栏的颜色改变，使得整个app 的风格看起来不是那么协调.Android4.4以后，api里边提供了设置状态栏透明的属性，so.我们就可以做一些文章了…二话不说了，先上几个效果图：">
+<meta property="og:description" content="写在前面发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://img.blog.csdn.net/20151118101825955">
-<meta property="og:image" content="http://img.blog.csdn.net/20151118102946159">
-<meta property="og:image" content="http://img.blog.csdn.net/20151118103005023">
-<meta property="og:updated_time" content="2017-03-23T08:13:52.000Z">
+<meta property="og:image" content="http://7xwejc.com1.z0.glb.clouddn.com/2016/8/3/pickdialog/pickdialog1.png">
+<meta property="og:updated_time" content="2017-03-23T08:20:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)">
-<meta name="twitter:description" content="我们都知道，ios上的状态栏是可以沉浸的，保持了标题栏一样的颜色，这样就让人感觉很高大上，整个屏幕的利用率和风格得到了充分的利用和展现。而在Android中状态栏默认是黑色的(真心不好看)，且不会随着App标题栏的颜色改变，使得整个app 的风格看起来不是那么协调.Android4.4以后，api里边提供了设置状态栏透明的属性，so.我们就可以做一些文章了…二话不说了，先上几个效果图：">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20151118101825955">
+<meta name="twitter:title" content="时间选择器">
+<meta name="twitter:description" content="写在前面发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要">
+<meta name="twitter:image" content="http://7xwejc.com1.z0.glb.clouddn.com/2016/8/3/pickdialog/pickdialog1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://devnote.info/2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/">
+  <link rel="canonical" href="http://devnote.info/自定义选择器/">
 
 
 
@@ -136,7 +134,7 @@
   };
 </script>
 
-  <title>Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明) | Caden's Blog</title>
+  <title>时间选择器 | Caden's Blog</title>
   
 
 
@@ -390,7 +388,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://devnote.info/2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/自定义选择器/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -407,7 +405,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)
+          <h2 class="post-title" itemprop="name headline">时间选择器
 
               
             
@@ -433,7 +431,7 @@
                 
               
 
-              <time title="创建时间：2016-07-01 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-01T00:00:00+08:00">2016-07-01</time>
+              <time title="创建时间：2016-08-08 00:00:00" itemprop="dateCreated datePublished" datetime="2016-08-08T00:00:00+08:00">2016-08-08</time>
             
 
             
@@ -455,6 +453,13 @@
 
                 
                 
+                  ，
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
               
             </span>
           
@@ -465,7 +470,7 @@
 
           
           
-             <span id="/2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/" class="leancloud_visitors" data-flag-title="Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)">
+             <span id="/自定义选择器/" class="leancloud_visitors" data-flag-title="时间选择器">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -496,36 +501,14 @@
       
 
       
-        <p>我们都知道，ios上的状态栏是可以沉浸的，保持了标题栏一样的颜色，这样就让人感觉很高大上，整个屏幕的利用率和风格得到了充分的利用和展现。而在Android中状态栏默认是黑色的(真心不好看)，且不会随着App标题栏的颜色改变，使得整个app 的风格看起来不是那么协调.<br>Android4.4以后，api里边提供了设置状态栏透明的属性，so.我们就可以做一些文章了…<br>二话不说了，先上几个效果图：<br><img src="http://img.blog.csdn.net/20151118101825955" alt="这里写图片描述"><br><a id="more"></a><br><img src="http://img.blog.csdn.net/20151118102946159" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20151118103005023" alt="这里写图片描述">    </p>
-<p>ok！切入正题  </p>
-<h4 id="xml布局"><a href="#xml布局" class="headerlink" title="xml布局"></a>xml布局</h4><p>title.xml<br><figure class="highlight plain"><figcaption><span>xmlns:android</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">              android:orientation=&quot;vertical&quot;</span><br><span class="line">              android:layout_width=&quot;match_parent&quot;</span><br><span class="line">              android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">              android:background=&quot;#43CD80&quot;&gt;</span><br><span class="line">    &lt;TextView</span><br><span class="line">            android:id=&quot;@+id/tv_title&quot;</span><br><span class="line">            android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">            android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">            android:layout_gravity=&quot;center&quot;</span><br><span class="line">            android:paddingTop=&quot;10dp&quot;</span><br><span class="line">            android:paddingBottom=&quot;10dp&quot;</span><br><span class="line">            android:text=&quot;透明状态栏测试&quot;</span><br><span class="line">            android:textSize=&quot;16sp&quot;</span><br><span class="line">            android:textColor=&quot;@android:color/white&quot;/&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在根布局中加入者两个属性，适应系统窗口，防止应用UI跑进状态栏中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android:clipToPadding=&quot;true&quot;</span><br><span class="line">android:fitsSystemWindows=&quot;true&quot;</span><br></pre></td></tr></table></figure></p>
-<p>注意：如果要设置状态栏透明，padding属性最好不要设在根布局中。</p>
-<h4 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h4><pre><code>private void setImmerseStatue(View view) {
-        if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.KITKAT) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            //透明导航栏                
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-            int statusBarHeight = getStatusBarHeight(this.getBaseContext());  
-            view.setPadding(0, statusBarHeight, 0, 0);
-        }
-    }  
-    /**
-     * 用于获取状态栏的高度。 使用Resource对象获取（推荐这种方式）
-     *
-     * @return 返回状态栏高度的像素值。
-     */
-    public static int getStatusBarHeight(Context context) {
-        int result = 0;
-        int resourceId = context.getResources().getIdentifier(&quot;status_bar_height&quot;, &quot;dimen&quot;,
-                &quot;android&quot;);
-        if (resourceId &gt; 0) {
-            result = context.getResources().getDimensionPixelSize(resourceId);
-        }
-        return result;
-    }
-</code></pre><p>调用的时候在setContetnt( )后把你的Title的布局作为参数穿进去就ok了.好了，看效果吧。  </p>
-<hr>
+        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要copy的代码必须了解他。废话好像有点多。好，进入正题。。。</p>
+<a id="more"></a>
+<h4 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h4><p><img src="http://7xwejc.com1.z0.glb.clouddn.com/2016/8/3/pickdialog/pickdialog1.png" alt=""> </p>
+<h4 id="自定义控件"><a href="#自定义控件" class="headerlink" title="自定义控件"></a>自定义控件</h4><p>PickerView之前是从GayHub上down上下来的，具体是哪位大神我也忘了，在此先向原作者致敬。自己用的修改了一些，加了一个Listene，做了一个回调。由于代码比较多，就贴出两个主要的方法。</p>
+<h5 id="1、绘制中间text的方法"><a href="#1、绘制中间text的方法" class="headerlink" title="1、绘制中间text的方法"></a>1、绘制中间text的方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">drawData</span><span class="params">(Canvas canvas)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (mDataList == <span class="keyword">null</span> || mDataList.size() == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 先绘制选中的text再往上往下绘制其余的text</span></span><br><span class="line">	<span class="keyword">float</span> scale = parabola(mViewHeight / <span class="number">4.0f</span>, mMoveLen);</span><br><span class="line">	<span class="keyword">float</span> size = (mMaxTextSize - mMinTextSize) * scale + mMinTextSize;</span><br><span class="line">	mPaint.setTextSize(size);</span><br><span class="line">	mPaint.setAlpha((<span class="keyword">int</span>) ((mMaxTextAlpha - mMinTextAlpha) * scale + mMinTextAlpha));</span><br><span class="line">	<span class="comment">// text居中绘制，注意baseline的计算才能达到居中，y值是text中心坐标</span></span><br><span class="line">	<span class="keyword">float</span> x = (<span class="keyword">float</span>) (mViewWidth / <span class="number">2.0</span>);</span><br><span class="line">	<span class="keyword">float</span> y = (<span class="keyword">float</span>) (mViewHeight / <span class="number">2.0</span> + mMoveLen);</span><br><span class="line">	FontMetricsInt fmi = mPaint.getFontMetricsInt();</span><br><span class="line">	<span class="keyword">float</span> baseline = (<span class="keyword">float</span>) (y - (fmi.bottom / <span class="number">2.0</span> + fmi.top / <span class="number">2.0</span>));</span><br><span class="line"></span><br><span class="line">	canvas.drawText(mDataList.get(mCurrentSelected).first, x, baseline, mPaint);</span><br><span class="line">	<span class="comment">// 绘制上方data</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (mCurrentSelected - i) &gt;= <span class="number">0</span>; i++) &#123;</span><br><span class="line">		drawOtherText(canvas, i, -<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 绘制下方data</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (mCurrentSelected + i) &lt; mDataList.size(); i++) &#123;</span><br><span class="line">		drawOtherText(canvas, i, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2、绘制上下text的方法"><a href="#2、绘制上下text的方法" class="headerlink" title="2、绘制上下text的方法"></a>2、绘制上下text的方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> canvas</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> position 距离mCurrentSelected的差值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> type 1表示向下绘制，-1表示向上绘制</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">drawOtherText</span><span class="params">(Canvas canvas, <span class="keyword">int</span> position, <span class="keyword">int</span> type)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> d = (<span class="keyword">float</span>) (MARGIN_ALPHA * mMinTextSize * position + type</span><br><span class="line">			* mMoveLen);</span><br><span class="line">	<span class="keyword">float</span> scale = parabola(mViewHeight / <span class="number">4.0f</span>, d);</span><br><span class="line">	<span class="keyword">float</span> size = (mMaxTextSize - mMinTextSize) * scale + mMinTextSize;</span><br><span class="line">	mPaint.setTextSize(size);</span><br><span class="line">	mPaint.setAlpha((<span class="keyword">int</span>) ((mMaxTextAlpha - mMinTextAlpha) * scale + mMinTextAlpha));</span><br><span class="line">	<span class="keyword">float</span> y = (<span class="keyword">float</span>) (mViewHeight / <span class="number">2.0</span> + type * d);</span><br><span class="line">	FontMetricsInt fmi = mPaint.getFontMetricsInt();</span><br><span class="line">	<span class="keyword">float</span> baseline = (<span class="keyword">float</span>) (y - (fmi.bottom / <span class="number">2.0</span> + fmi.top / <span class="number">2.0</span>));</span><br><span class="line">	canvas.drawText(mDataList.get(mCurrentSelected + type * position).first,</span><br><span class="line">			(<span class="keyword">float</span>) (mViewWidth / <span class="number">2.0</span>), baseline, mPaint);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="数据填充"><a href="#数据填充" class="headerlink" title="数据填充"></a>数据填充</h4><p>通过滚动监听来动态的设置时间日期数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> thisYear = <span class="keyword">new</span> Date().getYear() + <span class="number">1900</span>;</span><br><span class="line">   List&lt;Pair&lt;String, Object&gt;&gt; yearList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1900</span>; i &lt;= thisYear; i++) &#123;</span><br><span class="line">       yearList.add(<span class="keyword">new</span> Pair&lt;String, Object&gt;(String.valueOf(i), i));</span><br><span class="line">   &#125;</span><br><span class="line">   mYearPickerView.setData(yearList);</span><br><span class="line">   mYearPickerView.setOnSelectListener(<span class="keyword">this</span>);</span><br><span class="line">   <span class="keyword">if</span> (year &gt;= <span class="number">1900</span> &amp;&amp; year &lt;= <span class="keyword">new</span> Date().getYear() + <span class="number">1900</span>) &#123;</span><br><span class="line">       mYearPickerView.setSelected(year - <span class="number">1900</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   List&lt;Pair&lt;String, Object&gt;&gt; monthList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">12</span> ; i++) &#123;</span><br><span class="line">       monthList.add(<span class="keyword">new</span> Pair&lt;String, Object&gt;(String.valueOf(i), i));</span><br><span class="line">   &#125;</span><br><span class="line">   mMonthPickerView.setData(monthList);</span><br><span class="line">   mMonthPickerView.setOnSelectListener(<span class="keyword">this</span>);</span><br><span class="line">   <span class="keyword">if</span> (month &gt;= <span class="number">1</span> &amp;&amp; month &lt;= <span class="number">12</span>) &#123;</span><br><span class="line">       mMonthPickerView.setSelected(month - <span class="number">1</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>这个比较简单，所以就大概总结一下。然后deno源码放在了GayHub上：<a href="https://github.com/ChenLiheng/PickDialog" target="_blank" rel="noopener">PickDialog</a></p>
 
       
     </div>
@@ -549,11 +532,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/android/" rel="tag"># android</a>
+            <a href="/tags/选择器/" rel="tag"># 选择器</a>
           
-            <a href="/tags/java/" rel="tag"># java</a>
-          
-            <a href="/tags/状态栏透明/" rel="tag"># 状态栏透明</a>
+            <a href="/tags/自定义控件/" rel="tag"># 自定义控件</a>
           
         </div>
       
@@ -566,14 +547,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/View顶部悬浮实现/" rel="next" title="View顶部悬浮和顶部title栏滑动变色">
+                <i class="fa fa-chevron-left"></i> View顶部悬浮和顶部title栏滑动变色
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/01/GridView实现单选效果/" rel="prev" title="GridView实现单选效果">
-                GridView实现单选效果 <i class="fa fa-chevron-right"></i>
+              <a href="/关于Assert那些事/" rel="prev" title="关于Assets的那些事">
+                关于Assets的那些事 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -786,7 +771,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#xml布局"><span class="nav-number">1.</span> <span class="nav-text">xml布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java代码"><span class="nav-number">2.</span> <span class="nav-text">java代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果图"><span class="nav-number">2.</span> <span class="nav-text">效果图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义控件"><span class="nav-number">3.</span> <span class="nav-text">自定义控件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、绘制中间text的方法"><span class="nav-number">3.1.</span> <span class="nav-text">1、绘制中间text的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、绘制上下text的方法"><span class="nav-number">3.2.</span> <span class="nav-text">2、绘制上下text的方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据填充"><span class="nav-number">4.</span> <span class="nav-text">数据填充</span></a></li></ol></div>
             
 
           </div>
@@ -946,9 +931,9 @@
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://devnote.info/2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/";
-        this.page.identifier = "2016/07/01/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/";
-        this.page.title = 'Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)';
+        this.page.url = "http://devnote.info/自定义选择器/";
+        this.page.identifier = "自定义选择器/";
+        this.page.title = '时间选择器';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

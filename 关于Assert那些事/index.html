@@ -104,27 +104,25 @@
 
 
 
-  <meta name="description" content="写在前面发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要">
-<meta name="keywords" content="选择器,自定义控件">
+  <meta name="description" content="好久没有作总结了，一个是太忙，当然最主要的原因还是自己太懒，最近有点空闲时间，来总结一下Android中的Assets。我们都知道res和raw文件都会被映射到R.java文件下，访问的时候可以直接通过R.id.xxx访问，但是Assets就没有那么方便了，他不会将文件映射到R.java中，但是系统提供了一个AssertManager，所以主要就用它了。">
+<meta name="keywords" content="assets">
 <meta property="og:type" content="article">
-<meta property="og:title" content="时间选择器">
-<meta property="og:url" content="http://devnote.info/2016/08/08/自定义选择器/index.html">
+<meta property="og:title" content="关于Assets的那些事">
+<meta property="og:url" content="http://devnote.info/关于Assert那些事/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
-<meta property="og:description" content="写在前面发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要">
+<meta property="og:description" content="好久没有作总结了，一个是太忙，当然最主要的原因还是自己太懒，最近有点空闲时间，来总结一下Android中的Assets。我们都知道res和raw文件都会被映射到R.java文件下，访问的时候可以直接通过R.id.xxx访问，但是Assets就没有那么方便了，他不会将文件映射到R.java中，但是系统提供了一个AssertManager，所以主要就用它了。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://7xwejc.com1.z0.glb.clouddn.com/2016/8/3/pickdialog/pickdialog1.png">
-<meta property="og:updated_time" content="2017-03-23T08:20:36.000Z">
+<meta property="og:updated_time" content="2017-03-23T07:20:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时间选择器">
-<meta name="twitter:description" content="写在前面发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要">
-<meta name="twitter:image" content="http://7xwejc.com1.z0.glb.clouddn.com/2016/8/3/pickdialog/pickdialog1.png">
+<meta name="twitter:title" content="关于Assets的那些事">
+<meta name="twitter:description" content="好久没有作总结了，一个是太忙，当然最主要的原因还是自己太懒，最近有点空闲时间，来总结一下Android中的Assets。我们都知道res和raw文件都会被映射到R.java文件下，访问的时候可以直接通过R.id.xxx访问，但是Assets就没有那么方便了，他不会将文件映射到R.java中，但是系统提供了一个AssertManager，所以主要就用它了。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://devnote.info/2016/08/08/自定义选择器/">
+  <link rel="canonical" href="http://devnote.info/关于Assert那些事/">
 
 
 
@@ -134,7 +132,7 @@
   };
 </script>
 
-  <title>时间选择器 | Caden's Blog</title>
+  <title>关于Assets的那些事 | Caden's Blog</title>
   
 
 
@@ -388,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://devnote.info/2016/08/08/自定义选择器/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/关于Assert那些事/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -405,7 +403,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">时间选择器
+          <h2 class="post-title" itemprop="name headline">关于Assets的那些事
 
               
             
@@ -431,7 +429,7 @@
                 
               
 
-              <time title="创建时间：2016-08-08 00:00:00" itemprop="dateCreated datePublished" datetime="2016-08-08T00:00:00+08:00">2016-08-08</time>
+              <time title="创建时间：2017-03-02 12:39:04" itemprop="dateCreated datePublished" datetime="2017-03-02T12:39:04+08:00">2017-03-02</time>
             
 
             
@@ -453,13 +451,6 @@
 
                 
                 
-                  ，
-                
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
               
             </span>
           
@@ -470,7 +461,7 @@
 
           
           
-             <span id="/2016/08/08/自定义选择器/" class="leancloud_visitors" data-flag-title="时间选择器">
+             <span id="/关于Assert那些事/" class="leancloud_visitors" data-flag-title="关于Assets的那些事">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -501,14 +492,18 @@
       
 
       
-        <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>发现现在做App开发，几乎每次都会用到时间选择器，还有省市区三级联动什么的，今天将自己一直常用的，也是自己比较喜欢的一个自定义时间选择器贴出来，下次用的之后直接copy。俗话说的好，不会偷懒的程序员不是好程序员么。其实个人觉得这些既定的一些控件或者是代码，没必要每次都去重写，做一个可以通用的，下次直接使用其实也是一个很不错的选择，能提高你的工作效率，还能锻炼你优化代码的能力。当然，这些你要copy的代码必须了解他。废话好像有点多。好，进入正题。。。</p>
+        <p>好久没有作总结了，一个是太忙，当然最主要的原因还是自己太懒，最近有点空闲时间，来总结一下Android中的Assets。<br>我们都知道res和raw文件都会被映射到R.java文件下，访问的时候可以直接通过R.id.xxx访问，但是Assets就没有那么方便了，他不会将文件映射到R.java中，但是系统提供了一个AssertManager，所以主要就用它了。</p>
 <a id="more"></a>
-<h4 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h4><p><img src="http://7xwejc.com1.z0.glb.clouddn.com/2016/8/3/pickdialog/pickdialog1.png" alt=""> </p>
-<h4 id="自定义控件"><a href="#自定义控件" class="headerlink" title="自定义控件"></a>自定义控件</h4><p>PickerView之前是从GayHub上down上下来的，具体是哪位大神我也忘了，在此先向原作者致敬。自己用的修改了一些，加了一个Listene，做了一个回调。由于代码比较多，就贴出两个主要的方法。</p>
-<h5 id="1、绘制中间text的方法"><a href="#1、绘制中间text的方法" class="headerlink" title="1、绘制中间text的方法"></a>1、绘制中间text的方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">drawData</span><span class="params">(Canvas canvas)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (mDataList == <span class="keyword">null</span> || mDataList.size() == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 先绘制选中的text再往上往下绘制其余的text</span></span><br><span class="line">	<span class="keyword">float</span> scale = parabola(mViewHeight / <span class="number">4.0f</span>, mMoveLen);</span><br><span class="line">	<span class="keyword">float</span> size = (mMaxTextSize - mMinTextSize) * scale + mMinTextSize;</span><br><span class="line">	mPaint.setTextSize(size);</span><br><span class="line">	mPaint.setAlpha((<span class="keyword">int</span>) ((mMaxTextAlpha - mMinTextAlpha) * scale + mMinTextAlpha));</span><br><span class="line">	<span class="comment">// text居中绘制，注意baseline的计算才能达到居中，y值是text中心坐标</span></span><br><span class="line">	<span class="keyword">float</span> x = (<span class="keyword">float</span>) (mViewWidth / <span class="number">2.0</span>);</span><br><span class="line">	<span class="keyword">float</span> y = (<span class="keyword">float</span>) (mViewHeight / <span class="number">2.0</span> + mMoveLen);</span><br><span class="line">	FontMetricsInt fmi = mPaint.getFontMetricsInt();</span><br><span class="line">	<span class="keyword">float</span> baseline = (<span class="keyword">float</span>) (y - (fmi.bottom / <span class="number">2.0</span> + fmi.top / <span class="number">2.0</span>));</span><br><span class="line"></span><br><span class="line">	canvas.drawText(mDataList.get(mCurrentSelected).first, x, baseline, mPaint);</span><br><span class="line">	<span class="comment">// 绘制上方data</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (mCurrentSelected - i) &gt;= <span class="number">0</span>; i++) &#123;</span><br><span class="line">		drawOtherText(canvas, i, -<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 绘制下方data</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (mCurrentSelected + i) &lt; mDataList.size(); i++) &#123;</span><br><span class="line">		drawOtherText(canvas, i, <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="2、绘制上下text的方法"><a href="#2、绘制上下text的方法" class="headerlink" title="2、绘制上下text的方法"></a>2、绘制上下text的方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> canvas</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> position 距离mCurrentSelected的差值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> type 1表示向下绘制，-1表示向上绘制</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">drawOtherText</span><span class="params">(Canvas canvas, <span class="keyword">int</span> position, <span class="keyword">int</span> type)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> d = (<span class="keyword">float</span>) (MARGIN_ALPHA * mMinTextSize * position + type</span><br><span class="line">			* mMoveLen);</span><br><span class="line">	<span class="keyword">float</span> scale = parabola(mViewHeight / <span class="number">4.0f</span>, d);</span><br><span class="line">	<span class="keyword">float</span> size = (mMaxTextSize - mMinTextSize) * scale + mMinTextSize;</span><br><span class="line">	mPaint.setTextSize(size);</span><br><span class="line">	mPaint.setAlpha((<span class="keyword">int</span>) ((mMaxTextAlpha - mMinTextAlpha) * scale + mMinTextAlpha));</span><br><span class="line">	<span class="keyword">float</span> y = (<span class="keyword">float</span>) (mViewHeight / <span class="number">2.0</span> + type * d);</span><br><span class="line">	FontMetricsInt fmi = mPaint.getFontMetricsInt();</span><br><span class="line">	<span class="keyword">float</span> baseline = (<span class="keyword">float</span>) (y - (fmi.bottom / <span class="number">2.0</span> + fmi.top / <span class="number">2.0</span>));</span><br><span class="line">	canvas.drawText(mDataList.get(mCurrentSelected + type * position).first,</span><br><span class="line">			(<span class="keyword">float</span>) (mViewWidth / <span class="number">2.0</span>), baseline, mPaint);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="数据填充"><a href="#数据填充" class="headerlink" title="数据填充"></a>数据填充</h4><p>通过滚动监听来动态的设置时间日期数据<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> thisYear = <span class="keyword">new</span> Date().getYear() + <span class="number">1900</span>;</span><br><span class="line">   List&lt;Pair&lt;String, Object&gt;&gt; yearList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1900</span>; i &lt;= thisYear; i++) &#123;</span><br><span class="line">       yearList.add(<span class="keyword">new</span> Pair&lt;String, Object&gt;(String.valueOf(i), i));</span><br><span class="line">   &#125;</span><br><span class="line">   mYearPickerView.setData(yearList);</span><br><span class="line">   mYearPickerView.setOnSelectListener(<span class="keyword">this</span>);</span><br><span class="line">   <span class="keyword">if</span> (year &gt;= <span class="number">1900</span> &amp;&amp; year &lt;= <span class="keyword">new</span> Date().getYear() + <span class="number">1900</span>) &#123;</span><br><span class="line">       mYearPickerView.setSelected(year - <span class="number">1900</span>);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   List&lt;Pair&lt;String, Object&gt;&gt; monthList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">12</span> ; i++) &#123;</span><br><span class="line">       monthList.add(<span class="keyword">new</span> Pair&lt;String, Object&gt;(String.valueOf(i), i));</span><br><span class="line">   &#125;</span><br><span class="line">   mMonthPickerView.setData(monthList);</span><br><span class="line">   mMonthPickerView.setOnSelectListener(<span class="keyword">this</span>);</span><br><span class="line">   <span class="keyword">if</span> (month &gt;= <span class="number">1</span> &amp;&amp; month &lt;= <span class="number">12</span>) &#123;</span><br><span class="line">       mMonthPickerView.setSelected(month - <span class="number">1</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<p>这个比较简单，所以就大概总结一下。然后deno源码放在了GayHub上：<a href="https://github.com/ChenLiheng/PickDialog" target="_blank" rel="noopener">PickDialog</a></p>
+<h4 id="获取assert目录下的文件"><a href="#获取assert目录下的文件" class="headerlink" title="获取assert目录下的文件"></a>获取assert目录下的文件</h4><p>首先获取AssertManager:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AssetManager am = getResources().getAssets();</span><br></pre></td></tr></table></figure></p>
+<p>通过list()方法获取assets下所有文件的文件名:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] files = am.list(<span class="string">""</span>);</span><br></pre></td></tr></table></figure></p>
+<p>通过open()方法获取InputStream:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream inStream = am.open(fileName);</span><br></pre></td></tr></table></figure></p>
+<p>通过FileOutputStream写入到目标文件<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FileOutputStream fs = <span class="keyword">new</span> FileOutputStream(<span class="string">"目标文件路径"</span>);</span><br><span class="line"><span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line"><span class="keyword">int</span> byteread = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> ( (byteread = inStream.read(buffer)) != -<span class="number">1</span>) &#123;</span><br><span class="line">    fs.write(buffer, <span class="number">0</span>, byteread);</span><br><span class="line">&#125;</span><br><span class="line">fs.flush();</span><br><span class="line">fs.close();</span><br><span class="line">inStream.close();</span><br></pre></td></tr></table></figure></p>
+<h4 id="获取assert子目录下的文件"><a href="#获取assert子目录下的文件" class="headerlink" title="获取assert子目录下的文件"></a>获取assert子目录下的文件</h4><p>获取子目录下的所有文件名:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] files = am.list(<span class="string">"xxx"</span>+File.separator+<span class="string">"xxx"</span>+...);</span><br></pre></td></tr></table></figure></p>
+<p>获取InputStream<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream inStream = am.open(<span class="string">"xxx"</span>+File.separator+<span class="string">"xxx"</span>+...+fileName);</span><br></pre></td></tr></table></figure></p>
+<h4 id="获取一个apk文件中的assert目录下的文件"><a href="#获取一个apk文件中的assert目录下的文件" class="headerlink" title="获取一个apk文件中的assert目录下的文件"></a>获取一个apk文件中的assert目录下的文件</h4><p>做sdk的时候，需要在宿主程序中调用插件apk中assets中的资源文件，但是遇到的问题是这个插件apk和宿主程序不在同一个代码空间，没办法直接获取AssetManager的。查看源码后发现有一个addAssetPath方法，是通过apkPath的方式加载，所以就可以通过反射获取到AssetManager对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> AssetManager <span class="title">createAssetManager</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">    String apkPath = <span class="string">"absolutePath"</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        AssetManager assetManager = AssetManager.class.newInstance();</span><br><span class="line">        AssetManager.class.getDeclaredMethod(<span class="string">"addAssetPath"</span>, String.class).invoke(</span><br><span class="line">                assetManager, apkPath);</span><br><span class="line">        <span class="keyword">return</span> assetManager;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Throwable th) &#123;</span><br><span class="line">        th.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>能获取到它的AssetManager对象，我们也就能读取它的目录下的文件了。  </p>
+<h4 id="加载assets下的html文件"><a href="#加载assets下的html文件" class="headerlink" title="加载assets下的html文件"></a>加载assets下的html文件</h4><p>assets下的文件可以直接使用下面的方式直接加载，但是据我目前所知，只有html可以通过这种方式加载<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WebView.loadUrl(“file:<span class="comment">///android_asset/xxx.html”);</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="加载assets下的图片资源文件"><a href="#加载assets下的图片资源文件" class="headerlink" title="加载assets下的图片资源文件"></a>加载assets下的图片资源文件</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputStream inStream = am.open(fileName);</span><br><span class="line">Bitmap bitmap = BitmapFactory.decodeStream(inStream);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -532,9 +527,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/选择器/" rel="tag"># 选择器</a>
-          
-            <a href="/tags/自定义控件/" rel="tag"># 自定义控件</a>
+            <a href="/tags/assets/" rel="tag"># assets</a>
           
         </div>
       
@@ -547,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/01/View顶部悬浮实现/" rel="next" title="View顶部悬浮和顶部title栏滑动变色">
-                <i class="fa fa-chevron-left"></i> View顶部悬浮和顶部title栏滑动变色
+              <a href="/自定义选择器/" rel="next" title="时间选择器">
+                <i class="fa fa-chevron-left"></i> 时间选择器
               </a>
             
           </div>
@@ -557,8 +550,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/02/关于Assert那些事/" rel="prev" title="关于Assets的那些事">
-                关于Assets的那些事 <i class="fa fa-chevron-right"></i>
+              <a href="/Android爬坑笔记二/" rel="prev" title="Android爬坑笔记二">
+                Android爬坑笔记二 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -771,7 +764,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果图"><span class="nav-number">2.</span> <span class="nav-text">效果图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义控件"><span class="nav-number">3.</span> <span class="nav-text">自定义控件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、绘制中间text的方法"><span class="nav-number">3.1.</span> <span class="nav-text">1、绘制中间text的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、绘制上下text的方法"><span class="nav-number">3.2.</span> <span class="nav-text">2、绘制上下text的方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据填充"><span class="nav-number">4.</span> <span class="nav-text">数据填充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取assert目录下的文件"><span class="nav-number">1.</span> <span class="nav-text">获取assert目录下的文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取assert子目录下的文件"><span class="nav-number">2.</span> <span class="nav-text">获取assert子目录下的文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取一个apk文件中的assert目录下的文件"><span class="nav-number">3.</span> <span class="nav-text">获取一个apk文件中的assert目录下的文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载assets下的html文件"><span class="nav-number">4.</span> <span class="nav-text">加载assets下的html文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载assets下的图片资源文件"><span class="nav-number">5.</span> <span class="nav-text">加载assets下的图片资源文件</span></a></li></ol></div>
             
 
           </div>
@@ -931,9 +924,9 @@
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://devnote.info/2016/08/08/自定义选择器/";
-        this.page.identifier = "2016/08/08/自定义选择器/";
-        this.page.title = '时间选择器';
+        this.page.url = "http://devnote.info/关于Assert那些事/";
+        this.page.identifier = "关于Assert那些事/";
+        this.page.title = '关于Assets的那些事';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

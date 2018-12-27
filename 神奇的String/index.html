@@ -104,38 +104,27 @@
 
 
 
-  <meta name="description" content="Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。">
-<meta name="keywords" content="android studio">
+  <meta name="description" content="一、既可以作为基本类型，也可以作为引用类型两种不同的构造方法返回不同的类型">
+<meta name="keywords" content="JavaScript Java Android 前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Studio 安装与配置">
-<meta property="og:url" content="http://devnote.info/2016/07/12/Android Studio 安装使用/index.html">
+<meta property="og:title" content="神奇的String对象">
+<meta property="og:url" content="http://devnote.info/神奇的String/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
-<meta property="og:description" content="Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。">
+<meta property="og:description" content="一、既可以作为基本类型，也可以作为引用类型两种不同的构造方法返回不同的类型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311105643520">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311105938634">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311110341692">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311110611818">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311110932726">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311111403977">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311111522389">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311111609541">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311111702494">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311111730838">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311112026917">
-<meta property="og:image" content="http://img.blog.csdn.net/20160311112038902">
-<meta property="og:updated_time" content="2017-03-23T08:20:50.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/ChenLiheng/chenliheng.github.io/source/assets/images/2018-11-20/string-1.png">
+<meta property="og:updated_time" content="2018-12-25T01:14:31.608Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Studio 安装与配置">
-<meta name="twitter:description" content="Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。">
-<meta name="twitter:image" content="http://img.blog.csdn.net/20160311105643520">
+<meta name="twitter:title" content="神奇的String对象">
+<meta name="twitter:description" content="一、既可以作为基本类型，也可以作为引用类型两种不同的构造方法返回不同的类型">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ChenLiheng/chenliheng.github.io/source/assets/images/2018-11-20/string-1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://devnote.info/2016/07/12/Android Studio 安装使用/">
+  <link rel="canonical" href="http://devnote.info/神奇的String/">
 
 
 
@@ -145,7 +134,7 @@
   };
 </script>
 
-  <title>Android Studio 安装与配置 | Caden's Blog</title>
+  <title>神奇的String对象 | Caden's Blog</title>
   
 
 
@@ -399,7 +388,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://devnote.info/2016/07/12/Android Studio 安装使用/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/神奇的String/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -416,7 +405,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Android Studio 安装与配置
+          <h2 class="post-title" itemprop="name headline">神奇的String对象
 
               
             
@@ -442,7 +431,7 @@
                 
               
 
-              <time title="创建时间：2016-07-12 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-12T00:00:00+08:00">2016-07-12</time>
+              <time title="创建时间：2018-11-20 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-20T00:00:00+08:00">2018-11-20</time>
             
 
             
@@ -460,7 +449,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
 
                 
                 
@@ -474,7 +463,7 @@
 
           
           
-             <span id="/2016/07/12/Android Studio 安装使用/" class="leancloud_visitors" data-flag-title="Android Studio 安装与配置">
+             <span id="/神奇的String/" class="leancloud_visitors" data-flag-title="神奇的String对象">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -505,15 +494,82 @@
       
 
       
-        <p>Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。<br><a id="more"></a>  </p>
-<h3 id="Android-studio下载地址"><a href="#Android-studio下载地址" class="headerlink" title="Android studio下载地址"></a>Android studio下载地址</h3><p>官网地址：<a href="https://dl.google.com/dl/android/studio%20%E2%80%9C%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E2%80%9D" target="_blank" rel="noopener">传送门</a>  由于我们天朝的高墙，去官网下载的机会总是…，(对此行为不多做解释)不过对于开发人员来说，其实也不是什么大问题，现附上一良心网站：<a href="http://www.androiddevtools.cn/" title="http://www.androiddevtools.cn/" target="_blank" rel="noopener">http://www.androiddevtools.cn/</a></p>
-<h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><h4 id="1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置-一般是字体，样式等的设置，可以把你之前studio或-IDEA中的配置导进来-当然，前提是你安装并配置过-如果是第一次安装的话，选最后一个自己重新设置。"><a href="#1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置-一般是字体，样式等的设置，可以把你之前studio或-IDEA中的配置导进来-当然，前提是你安装并配置过-如果是第一次安装的话，选最后一个自己重新设置。" class="headerlink" title="1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置,一般是字体，样式等的设置，可以把你之前studio或 IDEA中的配置导进来(当然，前提是你安装并配置过)如果是第一次安装的话，选最后一个自己重新设置。"></a>1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置,一般是字体，样式等的设置，可以把你之前studio或 IDEA中的配置导进来(当然，前提是你安装并配置过)如果是第一次安装的话，选最后一个自己重新设置。</h4><p><img src="http://img.blog.csdn.net/20160311105643520" alt="这里写图片描述">    </p>
-<h4 id="2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。"><a href="#2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。" class="headerlink" title="2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。"></a>2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。</h4><p><img src="http://img.blog.csdn.net/20160311105938634" width="300" height="200">           <img src="http://img.blog.csdn.net/20160311110341692" width="300" height="200">  </p>
-<h4 id="3、找到你的studio的安装目录。找到idea-properties-这个文件，末尾添加，第一次打开不运行-disable-android-first-run-true"><a href="#3、找到你的studio的安装目录。找到idea-properties-这个文件，末尾添加，第一次打开不运行-disable-android-first-run-true" class="headerlink" title="3、找到你的studio的安装目录。找到idea.properties 这个文件，末尾添加，第一次打开不运行 disable.android.first.run=true"></a>3、找到你的studio的安装目录。找到idea.properties 这个文件，末尾添加，第一次打开不运行 disable.android.first.run=true</h4><p>  <img src="http://img.blog.csdn.net/20160311110611818" width="500" height="300"><br>  <img src="http://img.blog.csdn.net/20160311110932726" alt="这里写图片描述"></p>
-<h4 id="4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说"><a href="#4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说" class="headerlink" title="4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说"></a>4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说</h4><p><img src="http://img.blog.csdn.net/20160311111403977" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20160311111522389" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20160311111609541" alt="这里写图片描述"></p>
-<h4 id="5、当你新建一个项目后，你可能会遇到这么一个问题，android-studio-引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project-structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build-gradle里添加上以下代码："><a href="#5、当你新建一个项目后，你可能会遇到这么一个问题，android-studio-引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project-structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build-gradle里添加上以下代码：" class="headerlink" title="5、当你新建一个项目后，你可能会遇到这么一个问题，android studio 引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build.gradle里添加上以下代码："></a>5、当你新建一个项目后，你可能会遇到这么一个问题，android studio 引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build.gradle里添加上以下代码：</h4><p><img src="http://img.blog.csdn.net/20160311111702494" alt="这里写图片描述"><br>解决方法是<br><img src="http://img.blog.csdn.net/20160311111730838" alt="这里写图片描述"></p>
-<h4 id="6、好了，这样一个studio项目就配置好了，如果需要配置整个project-在这里配置"><a href="#6、好了，这样一个studio项目就配置好了，如果需要配置整个project-在这里配置" class="headerlink" title="6、好了，这样一个studio项目就配置好了，如果需要配置整个project 在这里配置"></a>6、好了，这样一个studio项目就配置好了，如果需要配置整个project 在这里配置</h4><p><img src="http://img.blog.csdn.net/20160311112026917" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20160311112038902" alt="这里写图片描述"></p>
-<p> 附：<br> 整个studio配置完成以后，我们可以保存自己的设置，下次安装的时候直接导入之前的配置即可。<br> File –&gt;&gt; Export Setting 导出一个jar文件<br> File –&gt;&gt; Import Setting 导入之前导出的jar文件<br> 再附上我的 <a href="http://download.csdn.net/detail/insertcsdn/9458590" target="_blank" rel="noopener">setting.jar</a></p>
+        <h3 id="一、既可以作为基本类型，也可以作为引用类型"><a href="#一、既可以作为基本类型，也可以作为引用类型" class="headerlink" title="一、既可以作为基本类型，也可以作为引用类型"></a>一、既可以作为基本类型，也可以作为引用类型</h3><h4 id="两种不同的构造方法返回不同的类型"><a href="#两种不同的构造方法返回不同的类型" class="headerlink" title="两种不同的构造方法返回不同的类型"></a>两种不同的构造方法返回不同的类型</h4><p><img src="https://raw.githubusercontent.com/ChenLiheng/chenliheng.github.io/source/assets/images/2018-11-20/string-1.png" style="width:100%"><br><a id="more"></a></p>
+<pre><code class="javascript"><span class="keyword">const</span> str = <span class="string">'Caden'</span>;
+<span class="built_in">console</span>.log(<span class="keyword">typeof</span> str);     <span class="comment">// string</span>
+<span class="keyword">const</span> strObj1 = <span class="keyword">new</span> <span class="built_in">String</span>(str);
+<span class="built_in">console</span>.log(<span class="keyword">typeof</span> strObj1); <span class="comment">// object</span>
+<span class="keyword">const</span> strObj2 = <span class="built_in">String</span>(str);
+<span class="built_in">console</span>.log(<span class="keyword">typeof</span> strObj2); <span class="comment">// string</span>
+</code></pre>
+<h4 id="str、strObj1、strObj2的存储位置-栈-or-堆？"><a href="#str、strObj1、strObj2的存储位置-栈-or-堆？" class="headerlink" title="str、strObj1、strObj2的存储位置,栈 or 堆？"></a>str、strObj1、strObj2的存储位置,栈 or 堆？</h4><pre><code class="javascript"><span class="keyword">const</span> a = <span class="string">"Bob"</span>;
+<span class="keyword">const</span> b = <span class="string">"Bob"</span>;
+<span class="keyword">const</span> c = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Bob"</span>);
+<span class="keyword">const</span> d = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Bob"</span>);
+<span class="built_in">console</span>.log(a === b); <span class="comment">// true</span>
+<span class="built_in">console</span>.log(b === c); <span class="comment">// false</span>
+<span class="built_in">console</span>.log(c === d); <span class="comment">// false</span>
+</code></pre>
+<p>所以结论是？<br>直接定义的string a &amp; b 是存储在栈中的,所以<code>a === b</code> 为<code>true</code>。而 new String() 是直接<br>创建两个对象，c &amp; d为两个不同的地址，但都指向堆内存的中同一个对象，<br>所以<code>c === d</code> 为<code>false</code>，<code>b === c</code>自然也是<code>false</code>了。  </p>
+<h4 id="创建时机"><a href="#创建时机" class="headerlink" title="创建时机"></a>创建时机</h4><p><code>String a = &quot;a&quot;</code>在编译阶段就会在内存中创建<br><code>String a = new String(&quot;a&quot;);</code>是在运行时才会在堆中创建对象  </p>
+<blockquote>
+<p>未曾深入研究,从网路上了解到的。在此先做一个记录  </p>
+</blockquote>
+<h3 id="二、String的原型对象prototype-基本类型和引用类型都可以引用"><a href="#二、String的原型对象prototype-基本类型和引用类型都可以引用" class="headerlink" title="二、String的原型对象prototype,基本类型和引用类型都可以引用"></a>二、String的原型对象prototype,基本类型和引用类型都可以引用</h3><pre><code class="javascript"><span class="built_in">String</span>.prototype.getCustomVal = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+    <span class="keyword">return</span> <span class="string">"I am "</span> + <span class="keyword">this</span>.toString();
+};
+<span class="built_in">console</span>.log(str.getCustomVal());     <span class="comment">// I am Caden</span>
+<span class="built_in">console</span>.log(strObj1.getCustomVal()); <span class="comment">// I am Caden</span>
+<span class="built_in">console</span>.log(strObj2.getCustomVal()); <span class="comment">// I am Caden</span>
+</code></pre>
+<blockquote>
+<p>note:也就是说对于String不管是基本类型还是引用类型都有原型对象,这个比较特殊  </p>
+</blockquote>
+<pre><code class="javascript"><span class="keyword">const</span> strPrototype = <span class="built_in">Object</span>.getPrototypeOf(str);
+<span class="keyword">const</span> strObj1Prototype = <span class="built_in">Object</span>.getPrototypeOf(strObj1);
+<span class="keyword">const</span> strObj2Prototype = <span class="built_in">Object</span>.getPrototypeOf(strObj1);
+<span class="built_in">console</span>.log(strPrototype === strObj1Prototype);     <span class="comment">// true</span>
+<span class="built_in">console</span>.log(strPrototype === strObj2Prototype);     <span class="comment">// true</span>
+<span class="built_in">console</span>.log(strObj1Prototype === strObj2Prototype); <span class="comment">// true</span>
+</code></pre>
+<p><strong>他们的原型对象也是同一个引用</strong></p>
+<blockquote>
+<p>why? Amazing !!!</p>
+</blockquote>
+<h3 id="三、String对象的value值"><a href="#三、String对象的value值" class="headerlink" title="三、String对象的value值"></a>三、String对象的value值</h3><ol>
+<li>获取value值必须通过toString()方法。  </li>
+<li>String 的值是不可变的。String 类定义的方法也不能改变字符串的内容，每一个方法都会<br>返回一个新的字符串。<br> eg:  <pre><code class="javascript"><span class="keyword">let</span> string = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Caden"</span>);
+<span class="built_in">console</span>.log(string.toString(), <span class="keyword">typeof</span> string); <span class="comment">// Caden object</span>
+string = string.toUpperCase();
+<span class="built_in">console</span>.log(string.toString(), <span class="keyword">typeof</span> string); <span class="comment">// CADEN string</span>
+string = string + <span class="string">" Welcome"</span>;
+<span class="built_in">console</span>.log(string.toString(), <span class="keyword">typeof</span> string); <span class="comment">// Caden Welcome string</span>
+</code></pre>
+ 看出来只要对原对象做出操作,引用类型（object）就会变成基础类型（string），但是依然可以调用String对象的原型方法，见上。</li>
+</ol>
+<h3 id="四、String对象方法"><a href="#四、String对象方法" class="headerlink" title="四、String对象方法"></a>四、String对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>charAt()</td>
+<td>返回在指定位置的字符</td>
+</tr>
+<tr>
+<td>split()</td>
+<td>把字符串分割为字符串数组</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>更多方法见下:<br><a href="http://www.w3school.com.cn/jsref/jsref_obj_string.asp" target="_blank" rel="noopener">传送门,走你</a></p>
 
       
     </div>
@@ -535,12 +591,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/android-studio/" rel="tag"># android studio</a>
-          
-        </div>
-      
 
       
       
@@ -550,8 +600,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/01/GridView实现单选效果/" rel="next" title="GridView实现单选效果">
-                <i class="fa fa-chevron-left"></i> GridView实现单选效果
+              <a href="/Android爬坑笔记二/" rel="next" title="Android爬坑笔记二">
+                <i class="fa fa-chevron-left"></i> Android爬坑笔记二
               </a>
             
           </div>
@@ -559,10 +609,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/12/Fragment切换 保存状态(add show hide)/" rel="prev" title="Fragment 小记">
-                Fragment 小记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -774,7 +820,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-studio下载地址"><span class="nav-number">1.</span> <span class="nav-text">Android studio下载地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装配置"><span class="nav-number">2.</span> <span class="nav-text">安装配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置-一般是字体，样式等的设置，可以把你之前studio或-IDEA中的配置导进来-当然，前提是你安装并配置过-如果是第一次安装的话，选最后一个自己重新设置。"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置,一般是字体，样式等的设置，可以把你之前studio或 IDEA中的配置导进来(当然，前提是你安装并配置过)如果是第一次安装的话，选最后一个自己重新设置。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。"><span class="nav-number">2.2.</span> <span class="nav-text">2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、找到你的studio的安装目录。找到idea-properties-这个文件，末尾添加，第一次打开不运行-disable-android-first-run-true"><span class="nav-number">2.3.</span> <span class="nav-text">3、找到你的studio的安装目录。找到idea.properties 这个文件，末尾添加，第一次打开不运行 disable.android.first.run=true</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说"><span class="nav-number">2.4.</span> <span class="nav-text">4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、当你新建一个项目后，你可能会遇到这么一个问题，android-studio-引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project-structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build-gradle里添加上以下代码："><span class="nav-number">2.5.</span> <span class="nav-text">5、当你新建一个项目后，你可能会遇到这么一个问题，android studio 引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build.gradle里添加上以下代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、好了，这样一个studio项目就配置好了，如果需要配置整个project-在这里配置"><span class="nav-number">2.6.</span> <span class="nav-text">6、好了，这样一个studio项目就配置好了，如果需要配置整个project 在这里配置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、既可以作为基本类型，也可以作为引用类型"><span class="nav-number">1.</span> <span class="nav-text">一、既可以作为基本类型，也可以作为引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#两种不同的构造方法返回不同的类型"><span class="nav-number">1.1.</span> <span class="nav-text">两种不同的构造方法返回不同的类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#str、strObj1、strObj2的存储位置-栈-or-堆？"><span class="nav-number">1.2.</span> <span class="nav-text">str、strObj1、strObj2的存储位置,栈 or 堆？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建时机"><span class="nav-number">1.3.</span> <span class="nav-text">创建时机</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、String的原型对象prototype-基本类型和引用类型都可以引用"><span class="nav-number">2.</span> <span class="nav-text">二、String的原型对象prototype,基本类型和引用类型都可以引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、String对象的value值"><span class="nav-number">3.</span> <span class="nav-text">三、String对象的value值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、String对象方法"><span class="nav-number">4.</span> <span class="nav-text">四、String对象方法</span></a></li></ol></div>
             
 
           </div>
@@ -934,9 +980,9 @@
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://devnote.info/2016/07/12/Android Studio 安装使用/";
-        this.page.identifier = "2016/07/12/Android Studio 安装使用/";
-        this.page.title = 'Android Studio 安装与配置';
+        this.page.url = "http://devnote.info/神奇的String/";
+        this.page.identifier = "神奇的String/";
+        this.page.title = '神奇的String对象';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

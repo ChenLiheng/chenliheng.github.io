@@ -104,27 +104,25 @@
 
 
 
-  <meta name="description" content="边边角角的东西还是挺多的，自己开发的时候遇到的问题，整理一下，做个笔记">
+  <meta name="description" content="在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅">
 <meta name="keywords" content="android,知识点汇总">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android爬坑笔记二">
-<meta property="og:url" content="http://devnote.info/2017/03/08/Android爬坑笔记二/index.html">
+<meta property="og:title" content="Android爬坑笔记一">
+<meta property="og:url" content="http://devnote.info/Android爬坑笔记一/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
-<meta property="og:description" content="边边角角的东西还是挺多的，自己开发的时候遇到的问题，整理一下，做个笔记">
+<meta property="og:description" content="在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://7xwejc.com1.z0.glb.clouddn.com/%E7%88%AC%E5%9D%91%E7%AC%94%E8%AE%B0%E4%BA%8C1.1.png">
-<meta property="og:updated_time" content="2017-03-23T07:21:30.000Z">
+<meta property="og:updated_time" content="2017-03-23T08:16:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android爬坑笔记二">
-<meta name="twitter:description" content="边边角角的东西还是挺多的，自己开发的时候遇到的问题，整理一下，做个笔记">
-<meta name="twitter:image" content="http://7xwejc.com1.z0.glb.clouddn.com/%E7%88%AC%E5%9D%91%E7%AC%94%E8%AE%B0%E4%BA%8C1.1.png">
+<meta name="twitter:title" content="Android爬坑笔记一">
+<meta name="twitter:description" content="在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅">
 
 
 
 
 
 
-  <link rel="canonical" href="http://devnote.info/2017/03/08/Android爬坑笔记二/">
+  <link rel="canonical" href="http://devnote.info/Android爬坑笔记一/">
 
 
 
@@ -134,7 +132,7 @@
   };
 </script>
 
-  <title>Android爬坑笔记二 | Caden's Blog</title>
+  <title>Android爬坑笔记一 | Caden's Blog</title>
   
 
 
@@ -388,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://devnote.info/2017/03/08/Android爬坑笔记二/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/Android爬坑笔记一/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -405,7 +403,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Android爬坑笔记二
+          <h2 class="post-title" itemprop="name headline">Android爬坑笔记一
 
               
             
@@ -431,7 +429,7 @@
                 
               
 
-              <time title="创建时间：2017-03-08 00:00:00" itemprop="dateCreated datePublished" datetime="2017-03-08T00:00:00+08:00">2017-03-08</time>
+              <time title="创建时间：2016-07-25 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-25T00:00:00+08:00">2016-07-25</time>
             
 
             
@@ -463,7 +461,7 @@
 
           
           
-             <span id="/2017/03/08/Android爬坑笔记二/" class="leancloud_visitors" data-flag-title="Android爬坑笔记二">
+             <span id="/Android爬坑笔记一/" class="leancloud_visitors" data-flag-title="Android爬坑笔记一">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -494,12 +492,27 @@
       
 
       
-        <p>边边角角的东西还是挺多的，自己开发的时候遇到的问题，整理一下，做个笔记<br><a id="more"></a> </p>
-<h3 id="1、单个子控件占父控件的一般并居中显示"><a href="#1、单个子控件占父控件的一般并居中显示" class="headerlink" title="1、单个子控件占父控件的一般并居中显示"></a>1、单个子控件占父控件的一般并居中显示</h3><p>效果图：<br><img src="http://7xwejc.com1.z0.glb.clouddn.com/%E7%88%AC%E5%9D%91%E7%AC%94%E8%AE%B0%E4%BA%8C1.1.png" alt=""><br>实现方式有两种，一种是通过计算父布局的宽高来动态计算；一种是直接设置xml属性便可以实现；既然布局就可以实现，那就直接用布局啊<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">"center_horizontal"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:orientation</span>=<span class="string">"horizontal"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_marginTop</span>=<span class="string">"50dp"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:background</span>=<span class="string">"@android:color/darker_gray"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:weightSum</span>=<span class="string">"2"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"0dp"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:background</span>=<span class="string">"#fff"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">"这是一个子控件"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>我们需要给父布局设置一个<code>android:weightSum=”2”</code>,然后自布局设置对应的<code>android:layout_weight=”1”</code>便可以了。  </p>
-<h3 id="2、Android-Webview-“Uncaught-TypeError-Cannot-read-property-‘getItem’-of-null”"><a href="#2、Android-Webview-“Uncaught-TypeError-Cannot-read-property-‘getItem’-of-null”" class="headerlink" title="2、Android Webview: “Uncaught TypeError: Cannot read property ‘getItem’ of null”"></a>2、Android Webview: “Uncaught TypeError: Cannot read property ‘getItem’ of null”</h3><p>在使用WebView的时候报了一个错误，以前没有遇到过，后来查资料发现需要添加一个设置项：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WebSettings settings = webView.getSettings();  </span><br><span class="line">settings.setDomStorageEnabled(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure></p>
-<h3 id="3、获取当前手机cpu支持的ABI指令集"><a href="#3、获取当前手机cpu支持的ABI指令集" class="headerlink" title="3、获取当前手机cpu支持的ABI指令集"></a>3、获取当前手机cpu支持的ABI指令集</h3><p>最近做sdk热更的时候需要在插件中自己加载第三方的so库文件，所以就引出了这个问题。我们要使用<code>System.load(“绝对路径”);</code>的方式加载，就需要知道当前手机cpu支持的指令集。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String[] getAbis() &#123;</span><br><span class="line">	String[] abis;</span><br><span class="line">	<span class="keyword">if</span>(Build.VERSION.SDK_INT&gt;=Build.VERSION_CODES.LOLLIPOP) &#123;</span><br><span class="line">	    abis = Build.SUPPORTED_ABIS;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	    abis = <span class="keyword">new</span> String[]&#123;Build.CPU_ABI,Build.CPU_ABI2&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">	StringBuilder abiStr = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">	<span class="keyword">for</span>(String abi:abis) &#123;</span><br><span class="line">	    abiStr.append(abi);</span><br><span class="line">	    abiStr.append(<span class="string">','</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	Log.i(<span class="string">"debug"</span>,<span class="string">"支持的Abi："</span>+abiStr.toString());</span><br><span class="line">	<span class="keyword">return</span> abis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="4、如果要在xml中写点击事件，android-onClick-”click”实现的方法一定要用public修饰"><a href="#4、如果要在xml中写点击事件，android-onClick-”click”实现的方法一定要用public修饰" class="headerlink" title="4、如果要在xml中写点击事件，android:onClick=”click”实现的方法一定要用public修饰"></a>4、如果要在xml中写点击事件，<code>android:onClick=”click”</code>实现的方法一定要用public修饰</h3>
+        <p>在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅<br><a id="more"></a> </p>
+<h4 id="1、ListView子条目上有按钮优先级问题"><a href="#1、ListView子条目上有按钮优先级问题" class="headerlink" title="1、ListView子条目上有按钮优先级问题"></a>1、ListView子条目上有按钮优先级问题</h4><p>可以在子布局根目录，也就是Item布局的根目录添加以下属性<br><code>android:descendantFocusability=”blocksDescendants”</code>  </p>
+<h4 id="2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置"><a href="#2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置" class="headerlink" title="2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置"></a>2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置</h4><p>可以在父布局元素下添加以下属性<br><code>android:focusable=&quot;true&quot;
+android:focusableInTouchMode=&quot;true&quot;</code></p>
+<h4 id="3、在String-xml中添加空格时用以下方式"><a href="#3、在String-xml中添加空格时用以下方式" class="headerlink" title="3、在String.xml中添加空格时用以下方式"></a>3、在String.xml中添加空格时用以下方式</h4><p><code>&amp;#160；(后面的分号要带)</code></p>
+<h4 id="4、弹出软键盘修改右下角按钮"><a href="#4、弹出软键盘修改右下角按钮" class="headerlink" title="4、弹出软键盘修改右下角按钮"></a>4、弹出软键盘修改右下角按钮</h4><p>imeOptions一共有4个属性值： </p>
+<ol>
+<li>actionUnspecified 未指定,对应常量EditorInfo.IME_ACTION_UNSPECIFIED. </li>
+<li>actionNone 没有动作,对应常量EditorInfo.IME_ACTION_NONE </li>
+<li>actionGo 去往,对应常量EditorInfo.IME_ACTION_GO </li>
+<li>actionSearch 搜索,对应常量EditorInfo.IME_ACTION_SEARCH</li>
+<li>actionSend 发送,对应常量EditorInfo.IME_ACTION_SEND</li>
+<li>actionNext 下一个,对应常量EditorInfo.IME_ACTION_NEXT</li>
+<li>actionDone 完成,对应常量EditorInfo.IME_ACTION_DONE </li>
+</ol>
+<p><code>android:imeOptions=&quot;actionSearch&quot;  
+android:singleLine=&quot;true&quot;</code><br>然后添加点击事件<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">view.setOnEditorActionListener(<span class="keyword">new</span> OnEditorActionListener() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onEditorAction</span><span class="params">(TextView v, <span class="keyword">int</span> actionId, KeyEvent event)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (actionId == EditorInfo.IME_ACTION_SEARCH) &#123;</span><br><span class="line">            <span class="comment">// 点击搜索后隐藏键盘`</span></span><br><span class="line">            ((InputMethodManager) title_searck.getContext()</span><br><span class="line">                    .getSystemService(Context.INPUT_METHOD_SERVICE))</span><br><span class="line">                    .hideSoftInputFromWindow(getCurrentFocus()</span><br><span class="line">                            .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h4 id="5、页面背景变成黑色"><a href="#5、页面背景变成黑色" class="headerlink" title="5、页面背景变成黑色"></a>5、页面背景变成黑色</h4><p>尝试修改主题为<br><code>android:theme=”@android:style/Theme.Light.NoTitleBar”</code> </p>
+<h4 id="6、AppIcon切图尺寸"><a href="#6、AppIcon切图尺寸" class="headerlink" title="6、AppIcon切图尺寸"></a>6、AppIcon切图尺寸</h4><p>drawable-xhdpi—-96 <em> 96<br>drawable-mdpi—–48 </em> 48<br>drawable-ldpi—–36 <em> 36<br>drawable-hdpi—–72 </em> 72  </p>
+<h4 id="7、横竖屏切换想要不重新执行生命周期需配置"><a href="#7、横竖屏切换想要不重新执行生命周期需配置" class="headerlink" title="7、横竖屏切换想要不重新执行生命周期需配置"></a>7、横竖屏切换想要不重新执行生命周期需配置</h4><p><code>android:configChanges=”orientation|keyboardHidden|screenSize”</code><br>配置后只会执行onConfigurationChanged方法。</p>
+
       
     </div>
 
@@ -537,8 +550,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/02/关于Assert那些事/" rel="next" title="关于Assets的那些事">
-                <i class="fa fa-chevron-left"></i> 关于Assets的那些事
+              <a href="/自定义Drawable/" rel="next" title="Drawable Xml笔记">
+                <i class="fa fa-chevron-left"></i> Drawable Xml笔记
               </a>
             
           </div>
@@ -547,8 +560,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/20/神奇的String/" rel="prev" title="神奇的String对象">
-                神奇的String对象 <i class="fa fa-chevron-right"></i>
+              <a href="/View顶部悬浮实现/" rel="prev" title="View顶部悬浮和顶部title栏滑动变色">
+                View顶部悬浮和顶部title栏滑动变色 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -761,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、单个子控件占父控件的一般并居中显示"><span class="nav-number">1.</span> <span class="nav-text">1、单个子控件占父控件的一般并居中显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Android-Webview-“Uncaught-TypeError-Cannot-read-property-‘getItem’-of-null”"><span class="nav-number">2.</span> <span class="nav-text">2、Android Webview: “Uncaught TypeError: Cannot read property ‘getItem’ of null”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、获取当前手机cpu支持的ABI指令集"><span class="nav-number">3.</span> <span class="nav-text">3、获取当前手机cpu支持的ABI指令集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、如果要在xml中写点击事件，android-onClick-”click”实现的方法一定要用public修饰"><span class="nav-number">4.</span> <span class="nav-text">4、如果要在xml中写点击事件，android:onClick=”click”实现的方法一定要用public修饰</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、ListView子条目上有按钮优先级问题"><span class="nav-number">1.</span> <span class="nav-text">1、ListView子条目上有按钮优先级问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置"><span class="nav-number">2.</span> <span class="nav-text">2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、在String-xml中添加空格时用以下方式"><span class="nav-number">3.</span> <span class="nav-text">3、在String.xml中添加空格时用以下方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、弹出软键盘修改右下角按钮"><span class="nav-number">4.</span> <span class="nav-text">4、弹出软键盘修改右下角按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、页面背景变成黑色"><span class="nav-number">5.</span> <span class="nav-text">5、页面背景变成黑色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、AppIcon切图尺寸"><span class="nav-number">6.</span> <span class="nav-text">6、AppIcon切图尺寸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、横竖屏切换想要不重新执行生命周期需配置"><span class="nav-number">7.</span> <span class="nav-text">7、横竖屏切换想要不重新执行生命周期需配置</span></a></li></ol></div>
             
 
           </div>
@@ -921,9 +934,9 @@
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://devnote.info/2017/03/08/Android爬坑笔记二/";
-        this.page.identifier = "2017/03/08/Android爬坑笔记二/";
-        this.page.title = 'Android爬坑笔记二';
+        this.page.url = "http://devnote.info/Android爬坑笔记一/";
+        this.page.identifier = "Android爬坑笔记一/";
+        this.page.title = 'Android爬坑笔记一';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

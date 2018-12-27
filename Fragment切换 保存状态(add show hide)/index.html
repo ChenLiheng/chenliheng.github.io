@@ -104,25 +104,25 @@
 
 
 
-  <meta name="description" content="在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅">
-<meta name="keywords" content="android,知识点汇总">
+  <meta name="description" content="关于Fragment的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于Fragment add 和 replace区别的文章了，自己没有独到的见解写再多也是显的苍白无力.">
+<meta name="keywords" content="android,fragment">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android爬坑笔记一">
-<meta property="og:url" content="http://devnote.info/2016/07/25/Android爬坑笔记一/index.html">
+<meta property="og:title" content="Fragment 小记">
+<meta property="og:url" content="http://devnote.info/Fragment切换 保存状态(add show hide)/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
-<meta property="og:description" content="在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅">
+<meta property="og:description" content="关于Fragment的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于Fragment add 和 replace区别的文章了，自己没有独到的见解写再多也是显的苍白无力.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-03-23T08:16:04.000Z">
+<meta property="og:updated_time" content="2017-03-23T08:15:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android爬坑笔记一">
-<meta name="twitter:description" content="在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅">
+<meta name="twitter:title" content="Fragment 小记">
+<meta name="twitter:description" content="关于Fragment的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于Fragment add 和 replace区别的文章了，自己没有独到的见解写再多也是显的苍白无力.">
 
 
 
 
 
 
-  <link rel="canonical" href="http://devnote.info/2016/07/25/Android爬坑笔记一/">
+  <link rel="canonical" href="http://devnote.info/Fragment切换 保存状态(add show hide)/">
 
 
 
@@ -132,7 +132,7 @@
   };
 </script>
 
-  <title>Android爬坑笔记一 | Caden's Blog</title>
+  <title>Fragment 小记 | Caden's Blog</title>
   
 
 
@@ -386,7 +386,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://devnote.info/2016/07/25/Android爬坑笔记一/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/Fragment切换 保存状态(add show hide)/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -403,7 +403,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Android爬坑笔记一
+          <h2 class="post-title" itemprop="name headline">Fragment 小记
 
               
             
@@ -429,7 +429,7 @@
                 
               
 
-              <time title="创建时间：2016-07-25 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-25T00:00:00+08:00">2016-07-25</time>
+              <time title="创建时间：2016-07-12 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-12T00:00:00+08:00">2016-07-12</time>
             
 
             
@@ -461,7 +461,7 @@
 
           
           
-             <span id="/2016/07/25/Android爬坑笔记一/" class="leancloud_visitors" data-flag-title="Android爬坑笔记一">
+             <span id="/Fragment切换 保存状态(add show hide)/" class="leancloud_visitors" data-flag-title="Fragment 小记">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -492,26 +492,13 @@
       
 
       
-        <p>在做Android开发的过程中总是会遇到一些“冷门”知识点带来的坑，久而久之，遇到的细细小小的知识点还是挺多的，闲来没事，自己汇总一下，方便以后忘了的时候方便查阅<br><a id="more"></a> </p>
-<h4 id="1、ListView子条目上有按钮优先级问题"><a href="#1、ListView子条目上有按钮优先级问题" class="headerlink" title="1、ListView子条目上有按钮优先级问题"></a>1、ListView子条目上有按钮优先级问题</h4><p>可以在子布局根目录，也就是Item布局的根目录添加以下属性<br><code>android:descendantFocusability=”blocksDescendants”</code>  </p>
-<h4 id="2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置"><a href="#2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置" class="headerlink" title="2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置"></a>2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置</h4><p>可以在父布局元素下添加以下属性<br><code>android:focusable=&quot;true&quot;
-android:focusableInTouchMode=&quot;true&quot;</code></p>
-<h4 id="3、在String-xml中添加空格时用以下方式"><a href="#3、在String-xml中添加空格时用以下方式" class="headerlink" title="3、在String.xml中添加空格时用以下方式"></a>3、在String.xml中添加空格时用以下方式</h4><p><code>&amp;#160；(后面的分号要带)</code></p>
-<h4 id="4、弹出软键盘修改右下角按钮"><a href="#4、弹出软键盘修改右下角按钮" class="headerlink" title="4、弹出软键盘修改右下角按钮"></a>4、弹出软键盘修改右下角按钮</h4><p>imeOptions一共有4个属性值： </p>
-<ol>
-<li>actionUnspecified 未指定,对应常量EditorInfo.IME_ACTION_UNSPECIFIED. </li>
-<li>actionNone 没有动作,对应常量EditorInfo.IME_ACTION_NONE </li>
-<li>actionGo 去往,对应常量EditorInfo.IME_ACTION_GO </li>
-<li>actionSearch 搜索,对应常量EditorInfo.IME_ACTION_SEARCH</li>
-<li>actionSend 发送,对应常量EditorInfo.IME_ACTION_SEND</li>
-<li>actionNext 下一个,对应常量EditorInfo.IME_ACTION_NEXT</li>
-<li>actionDone 完成,对应常量EditorInfo.IME_ACTION_DONE </li>
-</ol>
-<p><code>android:imeOptions=&quot;actionSearch&quot;  
-android:singleLine=&quot;true&quot;</code><br>然后添加点击事件<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">view.setOnEditorActionListener(<span class="keyword">new</span> OnEditorActionListener() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onEditorAction</span><span class="params">(TextView v, <span class="keyword">int</span> actionId, KeyEvent event)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (actionId == EditorInfo.IME_ACTION_SEARCH) &#123;</span><br><span class="line">            <span class="comment">// 点击搜索后隐藏键盘`</span></span><br><span class="line">            ((InputMethodManager) title_searck.getContext()</span><br><span class="line">                    .getSystemService(Context.INPUT_METHOD_SERVICE))</span><br><span class="line">                    .hideSoftInputFromWindow(getCurrentFocus()</span><br><span class="line">                            .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h4 id="5、页面背景变成黑色"><a href="#5、页面背景变成黑色" class="headerlink" title="5、页面背景变成黑色"></a>5、页面背景变成黑色</h4><p>尝试修改主题为<br><code>android:theme=”@android:style/Theme.Light.NoTitleBar”</code> </p>
-<h4 id="6、AppIcon切图尺寸"><a href="#6、AppIcon切图尺寸" class="headerlink" title="6、AppIcon切图尺寸"></a>6、AppIcon切图尺寸</h4><p>drawable-xhdpi—-96 <em> 96<br>drawable-mdpi—–48 </em> 48<br>drawable-ldpi—–36 <em> 36<br>drawable-hdpi—–72 </em> 72  </p>
-<h4 id="7、横竖屏切换想要不重新执行生命周期需配置"><a href="#7、横竖屏切换想要不重新执行生命周期需配置" class="headerlink" title="7、横竖屏切换想要不重新执行生命周期需配置"></a>7、横竖屏切换想要不重新执行生命周期需配置</h4><p><code>android:configChanges=”orientation|keyboardHidden|screenSize”</code><br>配置后只会执行onConfigurationChanged方法。</p>
+        <p>关于<strong>Fragment</strong>的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于<strong>Fragment</strong> <strong>add</strong> 和 <strong>replace</strong>区别的文章了，自己没有独到的见解写再多也是显的苍白无力.<br><a id="more"></a></p>
+<h3 id="Fragment切换的两种方式"><a href="#Fragment切换的两种方式" class="headerlink" title="Fragment切换的两种方式"></a>Fragment切换的两种方式</h3><h4 id="1-replace"><a href="#1-replace" class="headerlink" title="1. replace"></a>1. replace</h4><p> </p><p>FragmentManager fragmentManager = getSupportFragmentManager();<br> fragmentManager.beginTransaction().replace(layoutId,fragment).commit;<br> </p><strong>replace</strong>每次都会把之前的fragment remove掉在<strong>替换</strong>成新的，所以每次切换，fragment都是重新加载，如果有网络请求的话，每次切换就需要发送一次请求，这显然不妥，这样既耗费流量用户体验也不好。<p></p>
+<h4 id="2-add-show、hide"><a href="#2-add-show、hide" class="headerlink" title="2. add ( show、hide )"></a>2. add ( show、hide )</h4><p> </p><p>FragmentManager fragmentManager = getSupportFragmentManager();<br> fragmentManager.beginTransaction().add(layoutId,fragment).commit;<br> </p><strong>add</strong>这种方式是将 fragment <strong>添加</strong>到容器中，add之后是一层一层叠加的，故而这种方式也是比较浪费资源的。再次切换的时候，我们便可以用show和hide控制它的显示和隐藏了。  <p></p>
+<h3 id="实例代码"><a href="#实例代码" class="headerlink" title="实例代码"></a>实例代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">  * @param currentFragment 当前显示的Fragment  </span><br><span class="line">  * @param toFragment 将要跳转的Fragment</span><br><span class="line">  */</span><br><span class="line"> public void switchContent(Fragment currentFragment, Fragment toFragment) &#123;</span><br><span class="line">        FragmentTransaction transaction = fragmentManager.beginTransaction();</span><br><span class="line">        // 先判断是否被add过</span><br><span class="line">        if (!to.isAdded()) &#123;</span><br><span class="line">            // 隐藏当前的fragment，add下一个到Activity中 </span><br><span class="line">            transaction.hide(from).add(R.id.parent_layout, to).commit(); </span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            transaction.hide(from).show(to).commit(); // 隐藏当前的fragment，显示下一个</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>这个就是主要用到的方法了，一般我们会在MainActivity或者要显示这些Fragment的宿主类中先初始化add一个默认显示的fragment，将currentFragment设置默认值，然后在点击底部Tab按钮的时候便去调用上面的方法。切换你要显示的fragment并重新赋值currentFragment 。Perfact^_^…  </p>
+<h3 id="Fragment中的坑"><a href="#Fragment中的坑" class="headerlink" title="Fragment中的坑"></a>Fragment中的坑</h3><h4 id="1、Exception：java-lang-IllegalStateException-commit-already-called"><a href="#1、Exception：java-lang-IllegalStateException-commit-already-called" class="headerlink" title="1、Exception：java.lang.IllegalStateException: commit already called"></a>1、Exception：java.lang.IllegalStateException: commit already called</h4><p>FragmentTransaction只能回调一次，也就是说只能commit一次。每次都需要重新创建新的FragmentTransaction对象才可以，不要创建一个全局的FragmentTransaction 各处调用。  </p>
+<h4 id="2、Exception-Can-not-perform-this-action-after-onSaveInstanceState"><a href="#2、Exception-Can-not-perform-this-action-after-onSaveInstanceState" class="headerlink" title="2、Exception:Can not perform this action after onSaveInstanceState"></a>2、Exception:Can not perform this action after onSaveInstanceState</h4><p>复现条件：<br>      使用FragmentTransition的 commit方法添加一个Fragment的时候出现<br>解决方案：<br>      onSaveInstanceState方法是在该Activity即将被销毁前调用，来保存Activity数据的，如果在保存玩状态后再给它添加Fragment就会出错。解决办法就是把commit（）方法替换成 commitAllowingStateLoss()</p>
 
       
     </div>
@@ -537,7 +524,7 @@ android:singleLine=&quot;true&quot;</code><br>然后添加点击事件<br><figur
           
             <a href="/tags/android/" rel="tag"># android</a>
           
-            <a href="/tags/知识点汇总/" rel="tag"># 知识点汇总</a>
+            <a href="/tags/fragment/" rel="tag"># fragment</a>
           
         </div>
       
@@ -550,8 +537,8 @@ android:singleLine=&quot;true&quot;</code><br>然后添加点击事件<br><figur
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/19/自定义Drawable/" rel="next" title="Drawable Xml笔记">
-                <i class="fa fa-chevron-left"></i> Drawable Xml笔记
+              <a href="/Android Studio 安装使用/" rel="next" title="Android Studio 安装与配置">
+                <i class="fa fa-chevron-left"></i> Android Studio 安装与配置
               </a>
             
           </div>
@@ -560,8 +547,8 @@ android:singleLine=&quot;true&quot;</code><br>然后添加点击事件<br><figur
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/01/View顶部悬浮实现/" rel="prev" title="View顶部悬浮和顶部title栏滑动变色">
-                View顶部悬浮和顶部title栏滑动变色 <i class="fa fa-chevron-right"></i>
+              <a href="/自定义Drawable/" rel="prev" title="Drawable Xml笔记">
+                Drawable Xml笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -774,7 +761,7 @@ android:singleLine=&quot;true&quot;</code><br>然后添加点击事件<br><figur
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、ListView子条目上有按钮优先级问题"><span class="nav-number">1.</span> <span class="nav-text">1、ListView子条目上有按钮优先级问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置"><span class="nav-number">2.</span> <span class="nav-text">2、ScrollView中套用ListView时直接跳转到ListView记录第一条位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、在String-xml中添加空格时用以下方式"><span class="nav-number">3.</span> <span class="nav-text">3、在String.xml中添加空格时用以下方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、弹出软键盘修改右下角按钮"><span class="nav-number">4.</span> <span class="nav-text">4、弹出软键盘修改右下角按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、页面背景变成黑色"><span class="nav-number">5.</span> <span class="nav-text">5、页面背景变成黑色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、AppIcon切图尺寸"><span class="nav-number">6.</span> <span class="nav-text">6、AppIcon切图尺寸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、横竖屏切换想要不重新执行生命周期需配置"><span class="nav-number">7.</span> <span class="nav-text">7、横竖屏切换想要不重新执行生命周期需配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment切换的两种方式"><span class="nav-number">1.</span> <span class="nav-text">Fragment切换的两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-replace"><span class="nav-number">1.1.</span> <span class="nav-text">1. replace</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-add-show、hide"><span class="nav-number">1.2.</span> <span class="nav-text">2. add ( show、hide )</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例代码"><span class="nav-number">2.</span> <span class="nav-text">实例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment中的坑"><span class="nav-number">3.</span> <span class="nav-text">Fragment中的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、Exception：java-lang-IllegalStateException-commit-already-called"><span class="nav-number">3.1.</span> <span class="nav-text">1、Exception：java.lang.IllegalStateException: commit already called</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、Exception-Can-not-perform-this-action-after-onSaveInstanceState"><span class="nav-number">3.2.</span> <span class="nav-text">2、Exception:Can not perform this action after onSaveInstanceState</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -934,9 +921,9 @@ android:singleLine=&quot;true&quot;</code><br>然后添加点击事件<br><figur
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://devnote.info/2016/07/25/Android爬坑笔记一/";
-        this.page.identifier = "2016/07/25/Android爬坑笔记一/";
-        this.page.title = 'Android爬坑笔记一';
+        this.page.url = "http://devnote.info/Fragment切换 保存状态(add show hide)/";
+        this.page.identifier = "Fragment切换 保存状态(add show hide)/";
+        this.page.title = 'Fragment 小记';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

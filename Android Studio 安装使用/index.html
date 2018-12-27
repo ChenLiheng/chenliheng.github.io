@@ -104,25 +104,38 @@
 
 
 
-  <meta name="description" content="关于Fragment的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于Fragment add 和 replace区别的文章了，自己没有独到的见解写再多也是显的苍白无力.">
-<meta name="keywords" content="android,fragment">
+  <meta name="description" content="Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。">
+<meta name="keywords" content="android studio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fragment 小记">
-<meta property="og:url" content="http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/index.html">
+<meta property="og:title" content="Android Studio 安装与配置">
+<meta property="og:url" content="http://devnote.info/Android Studio 安装使用/index.html">
 <meta property="og:site_name" content="Caden&#39;s Blog">
-<meta property="og:description" content="关于Fragment的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于Fragment add 和 replace区别的文章了，自己没有独到的见解写再多也是显的苍白无力.">
+<meta property="og:description" content="Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-03-23T08:15:06.000Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311105643520">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311105938634">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311110341692">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311110611818">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311110932726">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311111403977">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311111522389">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311111609541">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311111702494">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311111730838">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311112026917">
+<meta property="og:image" content="http://img.blog.csdn.net/20160311112038902">
+<meta property="og:updated_time" content="2017-03-23T08:20:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fragment 小记">
-<meta name="twitter:description" content="关于Fragment的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于Fragment add 和 replace区别的文章了，自己没有独到的见解写再多也是显的苍白无力.">
+<meta name="twitter:title" content="Android Studio 安装与配置">
+<meta name="twitter:description" content="Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160311105643520">
 
 
 
 
 
 
-  <link rel="canonical" href="http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/">
+  <link rel="canonical" href="http://devnote.info/Android Studio 安装使用/">
 
 
 
@@ -132,7 +145,7 @@
   };
 </script>
 
-  <title>Fragment 小记 | Caden's Blog</title>
+  <title>Android Studio 安装与配置 | Caden's Blog</title>
   
 
 
@@ -386,7 +399,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/">
+    <link itemprop="mainEntityOfPage" href="http://devnote.info/Android Studio 安装使用/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caden">
@@ -403,7 +416,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Fragment 小记
+          <h2 class="post-title" itemprop="name headline">Android Studio 安装与配置
 
               
             
@@ -461,7 +474,7 @@
 
           
           
-             <span id="/2016/07/12/Fragment切换 保存状态(add show hide)/" class="leancloud_visitors" data-flag-title="Fragment 小记">
+             <span id="/Android Studio 安装使用/" class="leancloud_visitors" data-flag-title="Android Studio 安装与配置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -492,13 +505,15 @@
       
 
       
-        <p>关于<strong>Fragment</strong>的切换问题也是遇到好多次了，今天有时间做一个简单的记录。常见的我们会在底部Tab的切换时用到，当然，这篇文章也只是简单的说明如何去实现，就先不深究其所以然了，因为网上已经有很多关于<strong>Fragment</strong> <strong>add</strong> 和 <strong>replace</strong>区别的文章了，自己没有独到的见解写再多也是显的苍白无力.<br><a id="more"></a></p>
-<h3 id="Fragment切换的两种方式"><a href="#Fragment切换的两种方式" class="headerlink" title="Fragment切换的两种方式"></a>Fragment切换的两种方式</h3><h4 id="1-replace"><a href="#1-replace" class="headerlink" title="1. replace"></a>1. replace</h4><p> </p><p>FragmentManager fragmentManager = getSupportFragmentManager();<br> fragmentManager.beginTransaction().replace(layoutId,fragment).commit;<br> </p><strong>replace</strong>每次都会把之前的fragment remove掉在<strong>替换</strong>成新的，所以每次切换，fragment都是重新加载，如果有网络请求的话，每次切换就需要发送一次请求，这显然不妥，这样既耗费流量用户体验也不好。<p></p>
-<h4 id="2-add-show、hide"><a href="#2-add-show、hide" class="headerlink" title="2. add ( show、hide )"></a>2. add ( show、hide )</h4><p> </p><p>FragmentManager fragmentManager = getSupportFragmentManager();<br> fragmentManager.beginTransaction().add(layoutId,fragment).commit;<br> </p><strong>add</strong>这种方式是将 fragment <strong>添加</strong>到容器中，add之后是一层一层叠加的，故而这种方式也是比较浪费资源的。再次切换的时候，我们便可以用show和hide控制它的显示和隐藏了。  <p></p>
-<h3 id="实例代码"><a href="#实例代码" class="headerlink" title="实例代码"></a>实例代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">  * @param currentFragment 当前显示的Fragment  </span><br><span class="line">  * @param toFragment 将要跳转的Fragment</span><br><span class="line">  */</span><br><span class="line"> public void switchContent(Fragment currentFragment, Fragment toFragment) &#123;</span><br><span class="line">        FragmentTransaction transaction = fragmentManager.beginTransaction();</span><br><span class="line">        // 先判断是否被add过</span><br><span class="line">        if (!to.isAdded()) &#123;</span><br><span class="line">            // 隐藏当前的fragment，add下一个到Activity中 </span><br><span class="line">            transaction.hide(from).add(R.id.parent_layout, to).commit(); </span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            transaction.hide(from).show(to).commit(); // 隐藏当前的fragment，显示下一个</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>这个就是主要用到的方法了，一般我们会在MainActivity或者要显示这些Fragment的宿主类中先初始化add一个默认显示的fragment，将currentFragment设置默认值，然后在点击底部Tab按钮的时候便去调用上面的方法。切换你要显示的fragment并重新赋值currentFragment 。Perfact^_^…  </p>
-<h3 id="Fragment中的坑"><a href="#Fragment中的坑" class="headerlink" title="Fragment中的坑"></a>Fragment中的坑</h3><h4 id="1、Exception：java-lang-IllegalStateException-commit-already-called"><a href="#1、Exception：java-lang-IllegalStateException-commit-already-called" class="headerlink" title="1、Exception：java.lang.IllegalStateException: commit already called"></a>1、Exception：java.lang.IllegalStateException: commit already called</h4><p>FragmentTransaction只能回调一次，也就是说只能commit一次。每次都需要重新创建新的FragmentTransaction对象才可以，不要创建一个全局的FragmentTransaction 各处调用。  </p>
-<h4 id="2、Exception-Can-not-perform-this-action-after-onSaveInstanceState"><a href="#2、Exception-Can-not-perform-this-action-after-onSaveInstanceState" class="headerlink" title="2、Exception:Can not perform this action after onSaveInstanceState"></a>2、Exception:Can not perform this action after onSaveInstanceState</h4><p>复现条件：<br>      使用FragmentTransition的 commit方法添加一个Fragment的时候出现<br>解决方案：<br>      onSaveInstanceState方法是在该Activity即将被销毁前调用，来保存Activity数据的，如果在保存玩状态后再给它添加Fragment就会出错。解决办法就是把commit（）方法替换成 commitAllowingStateLoss()</p>
+        <p>Android Studio 已经成为Android开发的主流了，目前已经更新到了2.0预览版了，我是已经越来越喜欢Studio，但是出于种种原因，它的安装与配置总会让人头疼，闲来没事，把自己安装配置的过程记录一下^_^。<br><a id="more"></a>  </p>
+<h3 id="Android-studio下载地址"><a href="#Android-studio下载地址" class="headerlink" title="Android studio下载地址"></a>Android studio下载地址</h3><p>官网地址：<a href="https://dl.google.com/dl/android/studio%20%E2%80%9C%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E2%80%9D" target="_blank" rel="noopener">传送门</a>  由于我们天朝的高墙，去官网下载的机会总是…，(对此行为不多做解释)不过对于开发人员来说，其实也不是什么大问题，现附上一良心网站：<a href="http://www.androiddevtools.cn/" title="http://www.androiddevtools.cn/" target="_blank" rel="noopener">http://www.androiddevtools.cn/</a></p>
+<h3 id="安装配置"><a href="#安装配置" class="headerlink" title="安装配置"></a>安装配置</h3><h4 id="1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置-一般是字体，样式等的设置，可以把你之前studio或-IDEA中的配置导进来-当然，前提是你安装并配置过-如果是第一次安装的话，选最后一个自己重新设置。"><a href="#1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置-一般是字体，样式等的设置，可以把你之前studio或-IDEA中的配置导进来-当然，前提是你安装并配置过-如果是第一次安装的话，选最后一个自己重新设置。" class="headerlink" title="1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置,一般是字体，样式等的设置，可以把你之前studio或 IDEA中的配置导进来(当然，前提是你安装并配置过)如果是第一次安装的话，选最后一个自己重新设置。"></a>1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置,一般是字体，样式等的设置，可以把你之前studio或 IDEA中的配置导进来(当然，前提是你安装并配置过)如果是第一次安装的话，选最后一个自己重新设置。</h4><p><img src="http://img.blog.csdn.net/20160311105643520" alt="这里写图片描述">    </p>
+<h4 id="2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。"><a href="#2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。" class="headerlink" title="2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。"></a>2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。</h4><p><img src="http://img.blog.csdn.net/20160311105938634" width="300" height="200">           <img src="http://img.blog.csdn.net/20160311110341692" width="300" height="200">  </p>
+<h4 id="3、找到你的studio的安装目录。找到idea-properties-这个文件，末尾添加，第一次打开不运行-disable-android-first-run-true"><a href="#3、找到你的studio的安装目录。找到idea-properties-这个文件，末尾添加，第一次打开不运行-disable-android-first-run-true" class="headerlink" title="3、找到你的studio的安装目录。找到idea.properties 这个文件，末尾添加，第一次打开不运行 disable.android.first.run=true"></a>3、找到你的studio的安装目录。找到idea.properties 这个文件，末尾添加，第一次打开不运行 disable.android.first.run=true</h4><p>  <img src="http://img.blog.csdn.net/20160311110611818" width="500" height="300"><br>  <img src="http://img.blog.csdn.net/20160311110932726" alt="这里写图片描述"></p>
+<h4 id="4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说"><a href="#4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说" class="headerlink" title="4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说"></a>4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说</h4><p><img src="http://img.blog.csdn.net/20160311111403977" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20160311111522389" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20160311111609541" alt="这里写图片描述"></p>
+<h4 id="5、当你新建一个项目后，你可能会遇到这么一个问题，android-studio-引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project-structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build-gradle里添加上以下代码："><a href="#5、当你新建一个项目后，你可能会遇到这么一个问题，android-studio-引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project-structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build-gradle里添加上以下代码：" class="headerlink" title="5、当你新建一个项目后，你可能会遇到这么一个问题，android studio 引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build.gradle里添加上以下代码："></a>5、当你新建一个项目后，你可能会遇到这么一个问题，android studio 引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build.gradle里添加上以下代码：</h4><p><img src="http://img.blog.csdn.net/20160311111702494" alt="这里写图片描述"><br>解决方法是<br><img src="http://img.blog.csdn.net/20160311111730838" alt="这里写图片描述"></p>
+<h4 id="6、好了，这样一个studio项目就配置好了，如果需要配置整个project-在这里配置"><a href="#6、好了，这样一个studio项目就配置好了，如果需要配置整个project-在这里配置" class="headerlink" title="6、好了，这样一个studio项目就配置好了，如果需要配置整个project 在这里配置"></a>6、好了，这样一个studio项目就配置好了，如果需要配置整个project 在这里配置</h4><p><img src="http://img.blog.csdn.net/20160311112026917" alt="这里写图片描述"><br><img src="http://img.blog.csdn.net/20160311112038902" alt="这里写图片描述"></p>
+<p> 附：<br> 整个studio配置完成以后，我们可以保存自己的设置，下次安装的时候直接导入之前的配置即可。<br> File –&gt;&gt; Export Setting 导出一个jar文件<br> File –&gt;&gt; Import Setting 导入之前导出的jar文件<br> 再附上我的 <a href="http://download.csdn.net/detail/insertcsdn/9458590" target="_blank" rel="noopener">setting.jar</a></p>
 
       
     </div>
@@ -522,9 +537,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/android/" rel="tag"># android</a>
-          
-            <a href="/tags/fragment/" rel="tag"># fragment</a>
+            <a href="/tags/android-studio/" rel="tag"># android studio</a>
           
         </div>
       
@@ -537,8 +550,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/12/Android Studio 安装使用/" rel="next" title="Android Studio 安装与配置">
-                <i class="fa fa-chevron-left"></i> Android Studio 安装与配置
+              <a href="/Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)/" rel="next" title="Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)">
+                <i class="fa fa-chevron-left"></i> Android 4.4 以上分分钟实现状态栏伪沉浸(状态栏透明)
               </a>
             
           </div>
@@ -547,8 +560,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/19/自定义Drawable/" rel="prev" title="Drawable Xml笔记">
-                Drawable Xml笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/Fragment切换 保存状态(add show hide)/" rel="prev" title="Fragment 小记">
+                Fragment 小记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -761,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment切换的两种方式"><span class="nav-number">1.</span> <span class="nav-text">Fragment切换的两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-replace"><span class="nav-number">1.1.</span> <span class="nav-text">1. replace</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-add-show、hide"><span class="nav-number">1.2.</span> <span class="nav-text">2. add ( show、hide )</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例代码"><span class="nav-number">2.</span> <span class="nav-text">实例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fragment中的坑"><span class="nav-number">3.</span> <span class="nav-text">Fragment中的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、Exception：java-lang-IllegalStateException-commit-already-called"><span class="nav-number">3.1.</span> <span class="nav-text">1、Exception：java.lang.IllegalStateException: commit already called</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、Exception-Can-not-perform-this-action-after-onSaveInstanceState"><span class="nav-number">3.2.</span> <span class="nav-text">2、Exception:Can not perform this action after onSaveInstanceState</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-studio下载地址"><span class="nav-number">1.</span> <span class="nav-text">Android studio下载地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装配置"><span class="nav-number">2.</span> <span class="nav-text">安装配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置-一般是字体，样式等的设置，可以把你之前studio或-IDEA中的配置导进来-当然，前提是你安装并配置过-如果是第一次安装的话，选最后一个自己重新设置。"><span class="nav-number">2.1.</span> <span class="nav-text">1、首先就是傻瓜式安装，next…安装完成后打开的界面，三个选项，前边是导入之前的配置,一般是字体，样式等的设置，可以把你之前studio或 IDEA中的配置导进来(当然，前提是你安装并配置过)如果是第一次安装的话，选最后一个自己重新设置。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。"><span class="nav-number">2.2.</span> <span class="nav-text">2、点了ok后，会一直卡在这个界面（感谢祖国），不要紧，我们有一个诀窍，就是强制关掉它。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、找到你的studio的安装目录。找到idea-properties-这个文件，末尾添加，第一次打开不运行-disable-android-first-run-true"><span class="nav-number">2.3.</span> <span class="nav-text">3、找到你的studio的安装目录。找到idea.properties 这个文件，末尾添加，第一次打开不运行 disable.android.first.run=true</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说"><span class="nav-number">2.4.</span> <span class="nav-text">4、第三部改完之后重启就可以直接进去了，接下来就是最开心的配置环节了，不知道设置在哪？？？？？，看图，不多说</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、当你新建一个项目后，你可能会遇到这么一个问题，android-studio-引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project-structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build-gradle里添加上以下代码："><span class="nav-number">2.5.</span> <span class="nav-text">5、当你新建一个项目后，你可能会遇到这么一个问题，android studio 引进项目时，自动查找本机是否有项目设置的SDK版本，若发现没有，我们会在project structure修改成自己的SDK。然而，修改后，AS会自动在项目下的build.gradle里添加上以下代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、好了，这样一个studio项目就配置好了，如果需要配置整个project-在这里配置"><span class="nav-number">2.6.</span> <span class="nav-text">6、好了，这样一个studio项目就配置好了，如果需要配置整个project 在这里配置</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -921,9 +934,9 @@
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://devnote.info/2016/07/12/Fragment切换 保存状态(add show hide)/";
-        this.page.identifier = "2016/07/12/Fragment切换 保存状态(add show hide)/";
-        this.page.title = 'Fragment 小记';
+        this.page.url = "http://devnote.info/Android Studio 安装使用/";
+        this.page.identifier = "Android Studio 安装使用/";
+        this.page.title = 'Android Studio 安装与配置';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
