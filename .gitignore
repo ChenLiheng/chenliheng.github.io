@@ -1,0 +1,6 @@
+node_modules
+.dumi/tmp
+.dumi/tmp-production
+.DS_Store
+pnpm-lock.yaml
+/.husky
