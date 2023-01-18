@@ -2,14 +2,12 @@
  * @Author: 陈立恒  chenliheng@youlai.cn
  * @Date: 2023-01-17 15:31:55
  * @LastEditors: 陈立恒  chenliheng@youlai.cn
- * @LastEditTime: 2023-01-18 14:46:32
+ * @LastEditTime: 2023-01-18 17:10:18
  * @Description: 
  */
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  base: '/notes',
-  publicPath: '/notes/',
   themeConfig: {
     name: '',
     nav: [{
