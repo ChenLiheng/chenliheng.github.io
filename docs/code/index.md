@@ -2,12 +2,15 @@
 title: JavaScript
 ---
 ## 手机号脱敏
+
 ```javascript
 export const hideMobile = (mobile) => {
   return mobile.replace(/^(\d{3})\d{4}(\d{4})$/, "$1****$2")
 }
 ```
+
 ## 解析URL参数
+
 ```javascript
 export const getSearchParams = () => {
   const searchPar = new URLSearchParams(window.location.search)
@@ -20,6 +23,7 @@ export const getSearchParams = () => {
 ```
 
 ## 生成uuid
+
 ```javascript
 export const uuid = () => {
   const temp_url = URL.createObjectURL(new Blob())
@@ -30,6 +34,7 @@ export const uuid = () => {
 ```
 
 ## 单文件下载
+
 ```javascript
 export const downFileBy = (url: string) => {
   if (!url || url.length === 0) {
@@ -43,7 +48,9 @@ export const downFileBy = (url: string) => {
   document.body.removeChild(a);
 };
 ```
+
 ## 多文件下载
+
 ```javascript
 export const downMultipleFile = (urls: string[]) => {
   if (!urls || urls.length === 0) {
@@ -65,23 +72,24 @@ export const downMultipleFile = (urls: string[]) => {
 ```
 
 ## 复制到剪切板
+
 ```javascript
 const copyToClipboard = (text) =>
   navigator.clipboard?.writeText && navigator.clipboard.writeText(text)
 ```
+
 :::warning
 根据caniuse，该方法对93.08%的全球用户有效。所以必须检查用户的浏览器是否支持该API。为了支持所有用户，你可以使用一个输入并复制其内容。
 :::
 
 ## 生成随机颜色
+
 ```javascript
 const generateRandomHexColor = () => `#${Math.floor(Math.random() * 0xffffff) .toString(16)}`;
 ```
 
 ## 数组乱序
+
 ```typescript
 const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5)
 ```
-
-
-
