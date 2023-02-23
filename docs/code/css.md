@@ -31,3 +31,19 @@ position: relative;
 top: 50%;
 transform: translateY(-50%);
 ```
+
+## 纯字母数字不换行问题
+
+```css
+.container {
+  word-break: break-all;
+}
+```
+
+## 设置 `\r\n` 样式
+
+```css
+.block {
+  white-space: pre-wrap;
+}
+```

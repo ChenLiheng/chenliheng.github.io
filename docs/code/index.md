@@ -93,3 +93,11 @@ const generateRandomHexColor = () => `#${Math.floor(Math.random() * 0xffffff) .t
 ```typescript
 const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5)
 ```
+
+## 首字母大写
+
+```typescript
+export const capitalize = (word) => {
+  return (word || '').replace(/( |^)[a-z]/, (c) => c.toUpperCase());
+};
+```
