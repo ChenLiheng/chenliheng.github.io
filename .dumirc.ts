@@ -3,7 +3,7 @@
  * @Date: 2023-01-17 15:31:55
  * @LastEditors: 陈立恒  chenliheng@youlai.cn
  * @LastEditTime: 2023-01-18 17:10:18
- * @Description: 
+ * @Description:
  */
 import { defineConfig } from 'dumi';
 
@@ -19,6 +19,9 @@ export default defineConfig({
     }, {
       title: '工具',
       link: '/tool'
+    },{
+      title: '学习分享',
+      link: '/study'
     }],
     logo: '/logo.png'
   }
